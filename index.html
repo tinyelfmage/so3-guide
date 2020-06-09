@@ -49,7 +49,7 @@
         <option>Peppita Max Affection Route</option>
         <option>Mirage Max Affection Route</option>
         <option>Adray Max Affection Route</option>
-    </select>
+    </select><br>
     <button id="b_items" onclick="toggle('items')">show item locations</button>
     <button id="b_trophies" onclick="toggle('trophies')">show battle trophy requirements</button>
     <button id="b_inventor" onclick="toggle('inventor')">show inventor unlocks</button>
@@ -184,7 +184,8 @@ window.onload = function wc() {
   <div id='h_howtoreadthewalkthrough' class='collapse in'>
     <p>About the technical aspects of this guide:</p>
     <ul><li>All header text can be clicked to expand/collapse their respective sections</li>
-      <li>All of the header buttons can be used to change things at any time - just a heads-up though that if you change which PAs you do partway through the game you might not get the ending you want</li>
+      <li>Shop titles, boss names, etc can be clicked to expand for more content (respectively store items, boss stats/strategies, etc)</li>
+      <li>All of the banner buttons can be used to change things at any time - just a heads-up though that if you change which PAs you do partway through the game you might not get the ending you want</li>
       <li>For the item location toggle specifically, maps with no items are indicated as such (so you're never stuck with a broken toggle without realizing)</li>
     </ul>
     <p>About the game-related aspects:</p>
@@ -199,7 +200,7 @@ window.onload = function wc() {
     <h3><a href='#h_grantierresorthotel' data-toggle='collapse'>Grantier Resort Hotel</a></h3>
     <div id='h_grantierresorthotel' class='collapse in'>
       <p>[map goes here, no completion]</p>
-      <div class='pair'><div class='overlay'><img src='/maps/00_grantier.png'><img src='/maps/00_grantier_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/00_grantier.png'><img src='./maps/00_grantier_items.png' class='items'></div><div class='caption'>
       <div class='pa' char='all'><b>PA 1:</b> Check the trash can in room 105.</div>
       <div class='items'></div>
 </div></div>
@@ -207,19 +208,19 @@ window.onload = function wc() {
 
     <h3><a href='#h_evacuationfacility' data-toggle='collapse'>Evacuation Facility</a></h3>
     <div id='h_evacuationfacility' class='collapse in'>
-      <div class='pair'><div class='overlay'><img src='/maps/01_evac.png'><img src='/maps/01_evac_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/01_evac.png'><img src='./maps/01_evac_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
 
     <h3><a href='#h_transportshiphelre' data-toggle='collapse'>Transport Ship Helre</a></h3>
     <div id='h_transportshiphelre' class='collapse in'>
-      <div class='pair'><div class='overlay'><img src='/maps/02_helre.png'><img src='/maps/02_helre_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/02_helre.png'><img src='./maps/02_helre_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
 
     <h3><a href='#h_pesottoforest' data-toggle='collapse'>Pesotto Forest</a></h3>
     <div id='h_pesottoforest' class='collapse in'>
-      <div class='pair'><div class='overlay'><img src='/maps/03_pesotto.png'><img src='/maps/03_pesotto_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/03_pesotto.png'><img src='./maps/03_pesotto_items.png' class='items'></div><div class='caption'>
       <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (you can only cover around 98% on your very first outing, but the last 1% is feasible as soon as you unlock the next non-town area)</p>
       <p><b>Enemies:</b> Young Slime, Nobleman</p>
       <p>This is the first map with map completion, and you'll be able to complete it pretty fast outside one small area in the northwest of the northern half, which is currently blocked off by NPCs. Remember to hug the walls! The Bunny reward from this map sells for 9000 Fol, making it a great way to get some quick money early (and can be used to cheese some content a bit later if you so choose).</p>
@@ -230,7 +231,7 @@ window.onload = function wc() {
 
     <h3><a href='#h_whipplevillage' data-toggle='collapse'>Whipple Village</a></h3>
     <div id='h_whipplevillage' class='collapse in'>
-      <div class='pair'><div class='overlay'><img src='/maps/04_whipple.png'><img src='/maps/04_whipple_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/04_whipple.png'><img src='./maps/04_whipple_items.png' class='items'></div><div class='caption'>
       <p><b>No map completion</b></p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' href='#shop_generalstoremanybloom'>General Store "Manybloom"</a></h4></div><div id='shop_generalstoremanybloom' class='panel-collapse collapse'><div class='panel-body'>
       <ul><li>Blueberries (45 Fol)</li>
@@ -246,13 +247,13 @@ window.onload = function wc() {
 
     <h3><a href='#h_ruinsofcoffir' data-toggle='collapse'>Ruins of Coffir</a></h3>
     <div id='h_ruinsofcoffir' class='collapse in'>
-      <div class='pair'><div class='overlay'><img src='/maps/05_coffir.png'><img src='/maps/05_coffir_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/05_coffir.png'><img src='./maps/05_coffir_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
 
     <h3><a href='#h_nortonshideout' data-toggle='collapse'>Norton's Hideout</a></h3>
     <div id='h_nortonshideout' class='collapse in'>
-      <div class='pair'><div class='overlay'><img src='/maps/06_norton.png'><img src='/maps/06_norton_items.png' class='items'></div><div class='caption'>
+      <div class='pair'><div class='overlay'><img src='./maps/06_norton.png'><img src='./maps/06_norton_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
 
@@ -262,5 +263,5 @@ window.onload = function wc() {
 <h1><a href='#h_appendices' data-toggle='collapse'>Appendices</a></h1>
 <div id='h_appendices' class='collapse in'>
   </div>
-<p>Current word count: 1567</p>
+<p>Current word count: 1586</p>
 </div>
