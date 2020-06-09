@@ -25,6 +25,7 @@
         .overlay {
             position: relative;
             padding-right: 10px;
+            z-index: -1;
         }
         .overlay .items {
             position: absolute;
@@ -116,18 +117,18 @@ window.onload = function wc() {
     <p>Hi, I'm <a href="https://twitter.com/divinebenis">Aurel (paranoodle)</a> and I'm autistic and Star Ocean 3 is one of my special interests. I replay it pretty often, sometimes winging it and sometimes with a guide when I want to get specific endings/etc. And there's some really good guides around on GameFAQs, but almost every time I've needed to have 3+ open at once while I cross-reference things, so I've decided to try to make my own "all-in-one" walkthrough of sorts, taking advantage of scripting to give readers toggles for what parts they do/don't want covered.</p>
     <p>That said I'll link to the more in-depth FAQs/walkthroughs that cover things this guide doesn't cover, especially for the more complicated topics like Item Creation or how the AI works.</p>
 
-    <h3><a href='#h_onspoilers' data-toggle='collapse'>On Spoilers</a></h3>
-    <div id='h_onspoilers' class='collapse in'>
+    <h3><a href='#h_on_spoilers' data-toggle='collapse'>On Spoilers</a></h3>
+    <div id='h_on_spoilers' class='collapse in'>
       <p>This guide aims to be as spoiler-free as possible, but some concessions have to be made for simplicity's sake. Any and all <i>story</i> spoilers will be avoided, but due to how guides work there will be mechanics-related spoilers such as revealing which characters become party members, when certain abilities unlock, etc.</p>
       <p>That said, things like puzzle solutions will always be under a block so you can reveal them as you'd like, but don't risk seeing on accident if you want to solve them yourself.</p>
       </div>
     </div>
 
-  <h2><a href='#h_gamemechanics' data-toggle='collapse'>Game mechanics</a></h2>
-  <div id='h_gamemechanics' class='collapse in'>
+  <h2><a href='#h_game_mechanics' data-toggle='collapse'>Game mechanics</a></h2>
+  <div id='h_game_mechanics' class='collapse in'>
 
-    <h3><a href='#h_optionalpartymembers' data-toggle='collapse'>Optional Party Members</a></h3>
-    <div id='h_optionalpartymembers' class='collapse in'>
+    <h3><a href='#h_optional_party_members' data-toggle='collapse'>Optional Party Members</a></h3>
+    <div id='h_optional_party_members' class='collapse in'>
       <p>Star Ocean 3 has 6 mandatory party members (as in, no matter what you do, they'll always join your party), and 4 optional party members. Of those optional party members, you can only ever recruit <b>two</b> in a given playthrough, for a total of 8 party members.</p>
       <ul><li>The mandatory party members are all obtained automatically as you progress through the story (and Adray is the only one whose timing can vary based on player choices)</li>
         <li>The first optional party member is "locked in" at a specific point in the story, with Roger's requirement taking priority over Albel's, and Nel acting as a default if neither requirements were met</li>
@@ -136,8 +137,8 @@ window.onload = function wc() {
       <p>We'll cover the exact requirements for optional party members as it becomes relevant in-game.</p>
       </div>
 
-    <h3><a href='#h_privateactions' data-toggle='collapse'>Private Actions</a></h3>
-    <div id='h_privateactions' class='collapse in'>
+    <h3><a href='#h_private_actions' data-toggle='collapse'>Private Actions</a></h3>
+    <div id='h_private_actions' class='collapse in'>
       <p>Private Actions (PAs) are scenes that change party members' Affection Points (AP). They usually come in one of two varieties: dialogue options in cutscenes (either as part of the main story or sidequests), or just talking/interacting with an item/character at a given point. The latter means that depending on your goals sometimes you'll want to be careful <i>not</i> to talk to someone.</p>
       <p>The main use of PAs (other than roleplaying) is that AP is what determines which character's ending you get come the end of the game. The requirements for getting a character's ending are:</p>
       <ul><li>They must be a party member, though they don't have to be in the active party (this only applies to the optional party members: Nel, Roger, Albel, and Peppita)</li>
@@ -157,14 +158,14 @@ window.onload = function wc() {
       </ul>
       </div>
 
-    <h3><a href='#h_battletrophies' data-toggle='collapse'>Battle Trophies</a></h3>
-    <div id='h_battletrophies' class='collapse in'>
+    <h3><a href='#h_battle_trophies' data-toggle='collapse'>Battle Trophies</a></h3>
+    <div id='h_battle_trophies' class='collapse in'>
       <p>Since the PS2 didn't natively have achievements, battle trophies are Star Ocean 3's implementation of them. They're saved onto a memory card, but are independent of any specific save file. This means they carry across playthroughs, and across saves in general (so if a boss has two mutually exclusive battle trophies, you can get them both by reloading a pre-boss save again after obtaining the first one).</p>
       <p><b>Important note:</b> Battle trophies require playing on the Galaxy difficulty or above, and <i>must</i> be turned on in the battle simulator at the very start of the game. If you miss this, you won't be able to obtain any and the system essentially won't exist for that playthrough.</p>
       </div>
 
-    <h3><a href='#h_mapcompletion' data-toggle='collapse'>Map Completion</a></h3>
-    <div id='h_mapcompletion' class='collapse in'>
+    <h3><a href='#h_map_completion' data-toggle='collapse'>Map Completion</a></h3>
+    <div id='h_map_completion' class='collapse in'>
       <p>While "town" maps are all complete as soon as you first enter (as well as some unique event maps), that doesn't hold true for field/dungeon maps. You start with a blank map that automatically fills out around where you've walked, and reaching 99% completion on a map will award you one of three items.</p>
       <ul><li> Most field maps grant a 1/144 Scale Bunny</li>
         <li> Most dungeon maps grant a 1/60 Scale Bunny</li>
@@ -180,8 +181,8 @@ window.onload = function wc() {
   <h1><a href='#h_walkthrough' data-toggle='collapse'>Walkthrough</a></h1>
   <div id='h_walkthrough' class='collapse in'>
 
-  <h2><a href='#h_howtoreadthewalkthrough' data-toggle='collapse'>How to read the walkthrough</a></h2>
-  <div id='h_howtoreadthewalkthrough' class='collapse in'>
+  <h2><a href='#h_how_to_read_the_walkthrough' data-toggle='collapse'>How to read the walkthrough</a></h2>
+  <div id='h_how_to_read_the_walkthrough' class='collapse in'>
     <p>About the technical aspects of this guide:</p>
     <ul><li>All header text can be clicked to expand/collapse their respective sections</li>
       <li>Shop titles, boss names, etc can be clicked to expand for more content (respectively store items, boss stats/strategies, etc)</li>
@@ -190,15 +191,16 @@ window.onload = function wc() {
     </ul>
     <p>About the game-related aspects:</p>
     <ul><li>All maps come with a legend, but it's the same formatting between all of them</li>
+      <li>All places labeled as "inns" contain save points</li>
       <li>Any points that cause the plot to continue and halt exploration are noted</li>
     </ul>
     </div>
 
-  <h2><a href='#h_disc1' data-toggle='collapse'>Disc 1</a></h2>
-  <div id='h_disc1' class='collapse in'>
+  <h2><a href='#h_disc_1' data-toggle='collapse'>Disc 1</a></h2>
+  <div id='h_disc_1' class='collapse in'>
 
-    <h3><a href='#h_grantierresorthotel' data-toggle='collapse'>Grantier Resort Hotel</a></h3>
-    <div id='h_grantierresorthotel' class='collapse in'>
+    <h3><a href='#h_grantier_resort_hotel' data-toggle='collapse'>Grantier Resort Hotel</a></h3>
+    <div id='h_grantier_resort_hotel' class='collapse in'>
       <p>[map goes here, no completion]</p>
       <div class='pair'><div class='overlay'><img src='./maps/00_grantier.png'><img src='./maps/00_grantier_items.png' class='items'></div><div class='caption'>
       <div class='pa' char='all'><b>PA 1:</b> Check the trash can in room 105.</div>
@@ -206,34 +208,37 @@ window.onload = function wc() {
 </div></div>
       </div>
 
-    <h3><a href='#h_evacuationfacility' data-toggle='collapse'>Evacuation Facility</a></h3>
-    <div id='h_evacuationfacility' class='collapse in'>
+    <h3><a href='#h_evacuation_facility' data-toggle='collapse'>Evacuation Facility</a></h3>
+    <div id='h_evacuation_facility' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/01_evac.png'><img src='./maps/01_evac_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
 
-    <h3><a href='#h_transportshiphelre' data-toggle='collapse'>Transport Ship Helre</a></h3>
-    <div id='h_transportshiphelre' class='collapse in'>
+    <h3><a href='#h_transport_ship_helre' data-toggle='collapse'>Transport Ship Helre</a></h3>
+    <div id='h_transport_ship_helre' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/02_helre.png'><img src='./maps/02_helre_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
 
-    <h3><a href='#h_pesottoforest' data-toggle='collapse'>Pesotto Forest</a></h3>
-    <div id='h_pesottoforest' class='collapse in'>
+    <h3><a href='#h_pesotto_forest' data-toggle='collapse'>Pesotto Forest</a></h3>
+    <div id='h_pesotto_forest' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/03_pesotto.png'><img src='./maps/03_pesotto_items.png' class='items'></div><div class='caption'>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#pesotto_enemies'>Enemies</a></b></h4></div><div id='pesotto_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#young_slime'>Young Slime</a> - fairly trivial enemy, slow attacks</li>
+        <li>Nobleman - fairly trivial as well, will eventually flee combat</li>
+      </ul>
+</div></div></div></div>
       <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (you can only cover around 98% on your very first outing, but the last 1% is feasible as soon as you unlock the next non-town area)</p>
-      <p><b>Enemies:</b> Young Slime, Nobleman</p>
-      <p>This is the first map with map completion, and you'll be able to complete it pretty fast outside one small area in the northwest of the northern half, which is currently blocked off by NPCs. Remember to hug the walls! The Bunny reward from this map sells for 9000 Fol, making it a great way to get some quick money early (and can be used to cheese some content a bit later if you so choose).</p>
+      <p>This is the first map with map completion, and you'll be able to complete it pretty fast outside one small area in the northwest corner of the northern half of the map, which is currently blocked off by NPCs. Remember to hug the walls! The Bunny reward from this map sells for 9000 Fol, making it a great way to get some quick money early (and can be used to cheese some content a bit later if you so choose).</p>
       <p>As noted on the map, you can heal yourself next to the save point, but unlike most other recovery points in the game, it's not a circle on the ground like the save point, but requires interacting with the pod. Feel free to use it as often as you need, especially if you're using the monsters in this area to get a feel for the combat system.</p>
       <p>Once you're ready to proceed through this area, head north to Whipple Village.</p>
 </div></div>
       </div>
 
-    <h3><a href='#h_whipplevillage' data-toggle='collapse'>Whipple Village</a></h3>
-    <div id='h_whipplevillage' class='collapse in'>
+    <h3><a href='#h_whipple_village' data-toggle='collapse'>Whipple Village</a></h3>
+    <div id='h_whipple_village' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/04_whipple.png'><img src='./maps/04_whipple_items.png' class='items'></div><div class='caption'>
-      <p><b>No map completion</b></p>
-      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' href='#shop_generalstoremanybloom'>General Store "Manybloom"</a></h4></div><div id='shop_generalstoremanybloom' class='panel-collapse collapse'><div class='panel-body'>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_general_store_manybloom'>General Store "Manybloom"</a></b></h4></div><div id='shop_general_store_manybloom' class='panel-collapse collapse'><div class='panel-body'>
       <ul><li>Blueberries (45 Fol)</li>
         <li>Blackberries (35 Fol)</li>
         <li>Ring Mail (180 Fol)</li>
@@ -242,17 +247,33 @@ window.onload = function wc() {
         <li>Pomello Juice (32718 Fol)</li>
       </ul>
 </div></div></div></div>
+      <p><b>No map completion</b></p>
+      <p>Once you're done with cutscenes, to continue the plot:</p>
+      <ul><li>Talk to the girl in the house just north of the general store</li>
+        <li>Talk to the chief in the house labeled "inn"</li>
+        <li>Go back to the house you started in</li>
+      </ul>
+      <p>You're now free to leave the village. Make sure to pick up any items you'd like, as well as purchase anything interesting. The Pomello Juice is completely irrelevant at this stage in the game, but the Ring Mail is worth taking a look at if you're having trouble avoiding hits.</p>
 </div></div>
+      <p>Next up:</p>
+      <ul><li>Leave the village and go back down to the save point in Pesotto Forest, you'll get a scene when you interact with the pod</li>
+        <li>Return to Whipple again, and go back to the house in the bottom-right corner</li>
+        <li>Exit the house again</li>
+      </ul>
+      <p>At this point, I'd recommend saving at the elder's house (inn), because we'll be heading into our first proper dungeon! Head back out of the village, and you'll notice the NPCs previously blocking the way to the Ruins of Coffir are now gone.</p>
+      <p>This also marks the point at which you can 100% the Pesotto Forest map, and it's the best possible time to do so as there's no story triggers in that area at the moment.</p>
       </div>
 
-    <h3><a href='#h_ruinsofcoffir' data-toggle='collapse'>Ruins of Coffir</a></h3>
-    <div id='h_ruinsofcoffir' class='collapse in'>
+    <h3><a href='#h_ruins_of_coffir' data-toggle='collapse'>Ruins of Coffir</a></h3>
+    <div id='h_ruins_of_coffir' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/05_coffir.png'><img src='./maps/05_coffir_items.png' class='items'></div><div class='caption'>
+      <p><b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until much later in the game)</p>
+      <p><b>Enemies:</b></p>
 </div></div>
       </div>
 
-    <h3><a href='#h_nortonshideout' data-toggle='collapse'>Norton's Hideout</a></h3>
-    <div id='h_nortonshideout' class='collapse in'>
+    <h3><a href='#h_nortons_hideout' data-toggle='collapse'>Norton's Hideout</a></h3>
+    <div id='h_nortons_hideout' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/06_norton.png'><img src='./maps/06_norton_items.png' class='items'></div><div class='caption'>
 </div></div>
       </div>
@@ -263,5 +284,5 @@ window.onload = function wc() {
 <h1><a href='#h_appendices' data-toggle='collapse'>Appendices</a></h1>
 <div id='h_appendices' class='collapse in'>
   </div>
-<p>Current word count: 1586</p>
+<p>Current word count: 1844</p>
 </div>
