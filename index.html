@@ -1,0 +1,264 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            background: #cee8ed;
+            position: fixed;
+            top: 0;
+        }
+        .body {
+            color: #215858;
+            padding-top: 180px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        a {
+            color: #6cb9c7;
+        }
+        .pair {
+            display: flex;
+        }
+        .overlay {
+            position: relative;
+            padding-right: 10px;
+        }
+        .overlay .items {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<div class="header">
+    <h1>STAR OCEAN 3 COMPREHENSIVE WALKTHROUGH</h1>
+    <select id="s_pa" onchange="pa_select()">
+        <option>Show all PAs</option>
+        <option>Nel & Peppita Routing</option>
+        <option>Albel & Roger Routing</option>
+        <option>Sophia Max Affection Route</option>
+        <option>Cliff Max Affection Route</option>
+        <option>Nel Max Affection Route</option>
+        <option>Roger Max Affection Route</option>
+        <option>Maria Max Affection Route</option>
+        <option>Albel Max Affection Route</option>
+        <option>Peppita Max Affection Route</option>
+        <option>Mirage Max Affection Route</option>
+        <option>Adray Max Affection Route</option>
+    </select>
+    <button id="b_items" onclick="toggle('items')">show item locations</button>
+    <button id="b_trophies" onclick="toggle('trophies')">show battle trophy requirements</button>
+    <button id="b_inventor" onclick="toggle('inventor')">show inventor unlocks</button>
+    <button id="b_encyclopedia" onclick="toggle('encyclopedia')">show encyclopedia unlocks</button>
+    <br>
+    <button onclick="expand()">expand all</button>
+    <button onclick="collapse()">collapse all</button>
+</div>
+
+<script>
+function toggle(category) {
+    console.log(category);
+    var b = document.getElementById("b_" + category);
+    var elems = document.getElementsByClassName(category);
+    
+    if (elems.item(0).style.display === "none") {
+        b.style.background="#55dc9b";
+        for (var i in elems) { elems.item(i).style.display = "block"; }
+    } else {
+        b.style.background="#fff";
+        for (var i in elems) { elems.item(i).style.display = "none"; }
+    }
+}
+    
+function pa_select() {
+    function togl(char) {
+        var elements = document.getElementsByClassName("pa");
+        for (var i in elements) {
+            var elem = elements.item(i);
+            if(char == "all" || elem.getAttribute("char").includes(char)) { elem.style.display = "block";
+            } else { elem.style.display = "none"; }
+        }
+    }
+    
+    var val = document.getElementById("s_pa").selectedIndex;
+    switch(val) {
+        case 0: togl("all"); break;
+        case 1: togl("girl"); break;
+        case 2: togl("boy"); break;
+        case 3: togl("sophia"); break;
+        case 4: togl("cliff"); break;
+        case 5: togl("nel"); break;
+        case 6: togl("roger"); break;
+        case 7: togl("maria"); break;
+        case 8: togl("albel"); break;
+        case 9: togl("peppita"); break;
+        case 10: togl("mirage"); break;
+        case 11: togl("adray"); break;
+    }
+}
+    
+function expand() { $(".collapse").collapse("show"); }
+function collapse() { $(".collapse").collapse("hide"); }
+    
+window.onload = function wc() {
+    var togls = ["items", "trophies", "inventor", "encyclopedia"]
+    for (var x in togls) { toggle(togls[x]); }
+}
+</script>
+
+<div class="body" id="body">
+<h2><a href='#h_preface' data-toggle='collapse'>Preface</a></h2>
+<div id='h_preface' class='collapse in'>
+    <p>Hi, I'm <a href="https://twitter.com/divinebenis">Aurel (paranoodle)</a> and I'm autistic and Star Ocean 3 is one of my special interests. I replay it pretty often, sometimes winging it and sometimes with a guide when I want to get specific endings/etc. And there's some really good guides around on GameFAQs, but almost every time I've needed to have 3+ open at once while I cross-reference things, so I've decided to try to make my own "all-in-one" walkthrough of sorts, taking advantage of scripting to give readers toggles for what parts they do/don't want covered.</p>
+    <p>That said I'll link to the more in-depth FAQs/walkthroughs that cover things this guide doesn't cover, especially for the more complicated topics like Item Creation or how the AI works.</p>
+
+    <h3><a href='#h_onspoilers' data-toggle='collapse'>On Spoilers</a></h3>
+    <div id='h_onspoilers' class='collapse in'>
+      <p>This guide aims to be as spoiler-free as possible, but some concessions have to be made for simplicity's sake. Any and all <i>story</i> spoilers will be avoided, but due to how guides work there will be mechanics-related spoilers such as revealing which characters become party members, when certain abilities unlock, etc.</p>
+      <p>That said, things like puzzle solutions will always be under a block so you can reveal them as you'd like, but don't risk seeing on accident if you want to solve them yourself.</p>
+      </div>
+    </div>
+
+  <h2><a href='#h_gamemechanics' data-toggle='collapse'>Game mechanics</a></h2>
+  <div id='h_gamemechanics' class='collapse in'>
+
+    <h3><a href='#h_optionalpartymembers' data-toggle='collapse'>Optional Party Members</a></h3>
+    <div id='h_optionalpartymembers' class='collapse in'>
+      <p>Star Ocean 3 has 6 mandatory party members (as in, no matter what you do, they'll always join your party), and 4 optional party members. Of those optional party members, you can only ever recruit <b>two</b> in a given playthrough, for a total of 8 party members.</p>
+      <ul><li>The mandatory party members are all obtained automatically as you progress through the story (and Adray is the only one whose timing can vary based on player choices)</li>
+        <li>The first optional party member is "locked in" at a specific point in the story, with Roger's requirement taking priority over Albel's, and Nel acting as a default if neither requirements were met</li>
+        <li>The second optional party member can either be Peppita, when given the option to recruit her automatically during the story, or if she wasn't recruited, one of Roger, Albel or Nel, each with a specific sidequest later on in the game</li>
+      </ul>
+      <p>We'll cover the exact requirements for optional party members as it becomes relevant in-game.</p>
+      </div>
+
+    <h3><a href='#h_privateactions' data-toggle='collapse'>Private Actions</a></h3>
+    <div id='h_privateactions' class='collapse in'>
+      <p>Private Actions (PAs) are scenes that change party members' Affection Points (AP). They usually come in one of two varieties: dialogue options in cutscenes (either as part of the main story or sidequests), or just talking/interacting with an item/character at a given point. The latter means that depending on your goals sometimes you'll want to be careful <i>not</i> to talk to someone.</p>
+      <p>The main use of PAs (other than roleplaying) is that AP is what determines which character's ending you get come the end of the game. The requirements for getting a character's ending are:</p>
+      <ul><li>They must be a party member, though they don't have to be in the active party (this only applies to the optional party members: Nel, Roger, Albel, and Peppita)</li>
+        <li>Fayt's affection for the character must be 21 or higher</li>
+        <li>The character's affection for Fayt must be 50 or higher</li>
+      </ul>
+      <p>If more than one character meets these criteria, then you get the ending of whoever has the highest affection for Fayt. If <i>none</i> of the characters meet these criteria, then you get Fayt's solo ending.</p>
+      <p>Outside that, AP is also relevant during gameplay itself, in one of two ways:</p>
+      <ul><li>If A has high affection for B, and B dies in combat, A will get a unique voice line and go into the "angry" state, where they deal double damage for a short time</li>
+        <li>AP determines healing priority, so if both A and B are at critical HP, but C has higher affection for A than B, they'll heal A first</li>
+      </ul>
+      <p>Neither of these are important on a casual playthrough, but they can become relevant when min-maxing.</p>
+      <p>For this guide, you can use the drop-down at the top of the screen to pick which PAs you'd like to be guided to, with "Show all PAs" as an option if you just want to know what your options are as you go. The other options are:</p>
+      <ul><li><b>Nel & Peppita Route</b> is the general route to follow if you'd like to get the endings of <i>Sophia, Cliff, Nel, Peppita, or Mirage</i>. It involves picking up Nel and Peppita as your optional party members, and allows you to reload the game before the final boss and use affection-lowering items to change which ending you see.</li>
+        <li><b>Albel & Roger Route</b> is similar, but for getting the endings of <i>Maria, Roger, Albel, or Adray</i>. It involves picking up Albel and Roger as the two optional party members. Both this route and the previous one also allow for getting Fayt's solo ending instead.</li>
+        <li><b>[Name] Max Affection Route</b> is for if you'd like to go ham and get as many AP as possible on a given character. It's not as versatile as the other two but it means you can take any optional characters you'd like. If you know what ending you want to get, and you're not interested in one of the "standard" routes listed above, this is the option for you.</li>
+      </ul>
+      </div>
+
+    <h3><a href='#h_battletrophies' data-toggle='collapse'>Battle Trophies</a></h3>
+    <div id='h_battletrophies' class='collapse in'>
+      <p>Since the PS2 didn't natively have achievements, battle trophies are Star Ocean 3's implementation of them. They're saved onto a memory card, but are independent of any specific save file. This means they carry across playthroughs, and across saves in general (so if a boss has two mutually exclusive battle trophies, you can get them both by reloading a pre-boss save again after obtaining the first one).</p>
+      <p><b>Important note:</b> Battle trophies require playing on the Galaxy difficulty or above, and <i>must</i> be turned on in the battle simulator at the very start of the game. If you miss this, you won't be able to obtain any and the system essentially won't exist for that playthrough.</p>
+      </div>
+
+    <h3><a href='#h_mapcompletion' data-toggle='collapse'>Map Completion</a></h3>
+    <div id='h_mapcompletion' class='collapse in'>
+      <p>While "town" maps are all complete as soon as you first enter (as well as some unique event maps), that doesn't hold true for field/dungeon maps. You start with a blank map that automatically fills out around where you've walked, and reaching 99% completion on a map will award you one of three items.</p>
+      <ul><li> Most field maps grant a 1/144 Scale Bunny</li>
+        <li> Most dungeon maps grant a 1/60 Scale Bunny</li>
+        <li> Some specific field/dungeon maps grant 1/1 Scale Bunny</li>
+      </ul>
+      <p>The 1/144 Scale Bunny and 1/60 Scale Bunny both increase your combat movement speed by 5%, but neither of them stack with each other <i>or</i> dupes of themselves, so there's no point in keeping more than one bunny and you can just sell the extra for a hefty sum. The 1/1 Scale Bunny cuts your combat movement speed by half, but is worth a significantly higher amount of money.</p>
+      <p>Do note that when going for map completion, the area that gets filled out where you walk is relatively small, and the map itself tends to extend out a little around its borders, so you'll need to hug the walls quite a bit to reach 99%+.</p>
+      <p>Some areas can be completed on your first visit, but some will require more than one, either due to some areas being locked behind story progress directly, or due to requiring a mid-game item that destroys damaged walls. We'll point out which map completions can be obtained when.</p>
+      </div>
+
+    </div>
+
+  <h1><a href='#h_walkthrough' data-toggle='collapse'>Walkthrough</a></h1>
+  <div id='h_walkthrough' class='collapse in'>
+
+  <h2><a href='#h_howtoreadthewalkthrough' data-toggle='collapse'>How to read the walkthrough</a></h2>
+  <div id='h_howtoreadthewalkthrough' class='collapse in'>
+    <p>About the technical aspects of this guide:</p>
+    <ul><li>All header text can be clicked to expand/collapse their respective sections</li>
+      <li>All of the header buttons can be used to change things at any time - just a heads-up though that if you change which PAs you do partway through the game you might not get the ending you want</li>
+      <li>For the item location toggle specifically, maps with no items are indicated as such (so you're never stuck with a broken toggle without realizing)</li>
+    </ul>
+    <p>About the game-related aspects:</p>
+    <ul><li>All maps come with a legend, but it's the same formatting between all of them</li>
+      <li>Any points that cause the plot to continue and halt exploration are noted</li>
+    </ul>
+    </div>
+
+  <h2><a href='#h_disc1' data-toggle='collapse'>Disc 1</a></h2>
+  <div id='h_disc1' class='collapse in'>
+
+    <h3><a href='#h_grantierresorthotel' data-toggle='collapse'>Grantier Resort Hotel</a></h3>
+    <div id='h_grantierresorthotel' class='collapse in'>
+      <p>[map goes here, no completion]</p>
+      <div class='pair'><div class='overlay'><img src='/maps/00_grantier.png'><img src='/maps/00_grantier_items.png' class='items'></div><div class='caption'>
+      <div class='pa' char='all'><b>PA 1:</b> Check the trash can in room 105.</div>
+      <div class='items'></div>
+</div></div>
+      </div>
+
+    <h3><a href='#h_evacuationfacility' data-toggle='collapse'>Evacuation Facility</a></h3>
+    <div id='h_evacuationfacility' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='/maps/01_evac.png'><img src='/maps/01_evac_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_transportshiphelre' data-toggle='collapse'>Transport Ship Helre</a></h3>
+    <div id='h_transportshiphelre' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='/maps/02_helre.png'><img src='/maps/02_helre_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_pesottoforest' data-toggle='collapse'>Pesotto Forest</a></h3>
+    <div id='h_pesottoforest' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='/maps/03_pesotto.png'><img src='/maps/03_pesotto_items.png' class='items'></div><div class='caption'>
+      <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (you can only cover around 98% on your very first outing, but the last 1% is feasible as soon as you unlock the next non-town area)</p>
+      <p><b>Enemies:</b> Young Slime, Nobleman</p>
+      <p>This is the first map with map completion, and you'll be able to complete it pretty fast outside one small area in the northwest of the northern half, which is currently blocked off by NPCs. Remember to hug the walls! The Bunny reward from this map sells for 9000 Fol, making it a great way to get some quick money early (and can be used to cheese some content a bit later if you so choose).</p>
+      <p>As noted on the map, you can heal yourself next to the save point, but unlike most other recovery points in the game, it's not a circle on the ground like the save point, but requires interacting with the pod. Feel free to use it as often as you need, especially if you're using the monsters in this area to get a feel for the combat system.</p>
+      <p>Once you're ready to proceed through this area, head north to Whipple Village.</p>
+</div></div>
+      </div>
+
+    <h3><a href='#h_whipplevillage' data-toggle='collapse'>Whipple Village</a></h3>
+    <div id='h_whipplevillage' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='/maps/04_whipple.png'><img src='/maps/04_whipple_items.png' class='items'></div><div class='caption'>
+      <p><b>No map completion</b></p>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><a data-toggle='collapse' href='#shop_generalstoremanybloom'>General Store "Manybloom"</a></h4></div><div id='shop_generalstoremanybloom' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li>Blueberries (45 Fol)</li>
+        <li>Blackberries (35 Fol)</li>
+        <li>Ring Mail (180 Fol)</li>
+        <li>Clone Generator (350 Fol)</li>
+        <li>Fresh Sage (310 Fol)</li>
+        <li>Pomello Juice (32718 Fol)</li>
+      </ul>
+</div></div></div></div>
+</div></div>
+      </div>
+
+    <h3><a href='#h_ruinsofcoffir' data-toggle='collapse'>Ruins of Coffir</a></h3>
+    <div id='h_ruinsofcoffir' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='/maps/05_coffir.png'><img src='/maps/05_coffir_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_nortonshideout' data-toggle='collapse'>Norton's Hideout</a></h3>
+    <div id='h_nortonshideout' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='/maps/06_norton.png'><img src='/maps/06_norton_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    </div>
+  </div>
+
+<h1><a href='#h_appendices' data-toggle='collapse'>Appendices</a></h1>
+<div id='h_appendices' class='collapse in'>
+  </div>
+<p>Current word count: 1567</p>
+</div>
