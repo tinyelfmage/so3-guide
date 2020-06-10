@@ -111,7 +111,7 @@ window.onload = function wc() {
 }
 </script>
 
-<div class="body" id="body">
+<div class="body" id="body"><div class='toc'><big><b>Table of Contents</b></big><br>&nbsp;<b><a href='#h_preface'>Preface</a></b> | <a href='#h_on_spoilers'>On Spoilers</a><br>&nbsp;<b><a href='#h_game_mechanics'>Game mechanics</a></b> | <a href='#h_optional_party_members'>Optional Party Members</a> | <a href='#h_private_actions'>Private Actions</a> | <a href='#h_battle_trophies'>Battle Trophies</a> | <a href='#h_map_completion'>Map Completion</a><br><b><big><a href='#h_walkthrough'>Walkthrough</a></big></b><br>&nbsp;<b><a href='#h_how_to_read_the_walkthrough'>How to read the walkthrough</a></b><br>&nbsp;<b><a href='#h_disc_1'>Disc 1</a></b> | <a href='#h_grantier_resort_hotel'>Grantier Resort Hotel</a> | <a href='#h_evacuation_facility'>Evacuation Facility</a> | <a href='#h_transport_ship_helre'>Transport Ship Helre</a> | <a href='#h_pesotto_forest'>Pesotto Forest</a> | <a href='#h_whipple_village'>Whipple Village</a> | <a href='#h_ruins_of_coffir'>Ruins of Coffir</a> | <a href='#h_nortons_hideout'>Norton's Hideout</a> | <a href='#h_leaving_vanguard_iii'>Leaving Vanguard III</a> | <a href='#h_airyglyph_aqueducts'>Airyglyph Aqueducts</a> | <a href='#h_royal_city_of_airyglyph'>Royal City of Airyglyph</a> | <a href='#h_traum_mountains'>Traum Mountains</a> | <a href='#h_mining_town_of_kirlsa'>Mining Town of Kirlsa</a> | <a href='#h_kirlsa_caverns'>Kirlsa Caverns</a> | <a href='#h_bequerel_mountain_path'>Bequerel Mountain Path</a> | <a href='#h_riverfront_village_of_arias'>Riverfront Village of Arias</a> | <a href='#h_aire_hillskirlsa_hills'>Aire Hills/Kirlsa Hills</a> | <a href='#h_granah_hills'>Granah Hills</a> | <a href='#h_kirlsa_training_facility'>Kirlsa Training Facility</a> | <a href='#h_palmira_plains'>Palmira Plains</a> | <a href='#h_trading_town_of_peterny'>Trading Town of Peterny</a> | <a href='#h_sanmite_steppe'>Sanmite Steppe</a> | <a href='#h_duggus_forest'>Duggus Forest</a> | <a href='#h_lost_city_of_surferio'>Lost City of Surferio</a> | <a href='#h_irisa_fields'>Irisa Fields</a> | <a href='#h_surferio_annex'>Surferio Annex</a> | <a href='#h_sacred_city_of_aquios'>Sacred City of Aquios</a> | <a href='#h_castle_aquaria'>Castle Aquaria</a> | <a href='#h_bequerel_mine'>Bequerel Mine</a> | <a href='#h_war'>War</a> | <a href='#h_sealed_cavern'>Sealed Cavern</a> | <a href='#h_shrine_of_kaddan'>Shrine of Kaddan</a> | <a href='#h_passage_from_parch_to_plenty'>Passage from Parch to Plenty</a> | <a href='#h_mosel_dunes'>Mosel Dunes</a> | <a href='#h_ancient_ruins_of_mosel'>Ancient Ruins of Mosel</a> | <a href='#h_mountains_of_barr'>Mountains of Barr</a> | <a href='#h_ruins_of_barr'>Ruins of Barr</a> | <a href='#h_urssa_lava_caves'>Urssa Lava Caves</a> | <a href='#h_moonbase'>Moonbase</a><br>&nbsp;<b><a href='#h_disc_2'>Disc 2</a></b><br><b><big><a href='#h_appendices'>Appendices</a></big></b></div>
 <h2><a href='#h_preface' data-toggle='collapse'>Preface</a></h2>
 <div id='h_preface' class='collapse in'>
     <p>Hi, I'm <a href="https://twitter.com/divinebenis">Aurel (paranoodle)</a> and I'm autistic and Star Ocean 3 is one of my special interests. I replay it pretty often, sometimes winging it and sometimes with a guide when I want to get specific endings/etc. And there's some really good guides around on GameFAQs, but almost every time I've needed to have 3+ open at once while I cross-reference things, so I've decided to try to make my own "all-in-one" walkthrough of sorts, taking advantage of scripting to give readers toggles for what parts they do/don't want covered.</p>
@@ -225,7 +225,7 @@ window.onload = function wc() {
       <div class='pair'><div class='overlay'><img src='./maps/03_pesotto.png'><img src='./maps/03_pesotto_items.png' class='items'></div><div class='caption'>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#pesotto_enemies'>Enemies</a></b></h4></div><div id='pesotto_enemies' class='panel-collapse collapse'><div class='panel-body'>
       <ul><li><a href='#young_slime'>Young Slime</a> - fairly trivial enemy, slow attacks</li>
-        <li>Nobleman - fairly trivial as well, will eventually flee combat</li>
+        <li><a href='#nobleman'>Nobleman</a> - fairly trivial as well, will eventually flee combat</li>
       </ul>
 </div></div></div></div>
       <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (you can only cover around 98% on your very first outing, but the last 1% is feasible as soon as you unlock the next non-town area)</p>
@@ -267,8 +267,14 @@ window.onload = function wc() {
     <h3><a href='#h_ruins_of_coffir' data-toggle='collapse'>Ruins of Coffir</a></h3>
     <div id='h_ruins_of_coffir' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/05_coffir.png'><img src='./maps/05_coffir_items.png' class='items'></div><div class='caption'>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#coffir_enemies'>Enemies</a></b></h4></div><div id='coffir_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li> a</li>
+      </ul>
+</div></div></div></div>
       <p><b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until much later in the game)</p>
-      <p><b>Enemies:</b></p>
+      <p>As mentioned just above, this map can't be completed just yet - the areas marked in red need to be destroyed using an item we won't have until later in the game. This means the entire greyed-out areas of the map are inaccessible at the moment.</p>
+      <div class='items'>As such, the items found there aren't listed at the moment, they'll be included next time we visit the ruins.</div>
+
 </div></div>
       </div>
 
@@ -278,11 +284,229 @@ window.onload = function wc() {
 </div></div>
       </div>
 
+    <h3><a href='#h_leaving_vanguard_iii' data-toggle='collapse'>Leaving Vanguard III</a></h3>
+    <div id='h_leaving_vanguard_iii' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_airyglyph_aqueducts' data-toggle='collapse'>Airyglyph Aqueducts</a></h3>
+    <div id='h_airyglyph_aqueducts' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/07_aqueduct.png'><img src='./maps/07_aqueduct_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_royal_city_of_airyglyph' data-toggle='collapse'>Royal City of Airyglyph</a></h3>
+    <div id='h_royal_city_of_airyglyph' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/08_airyglyph.png'><img src='./maps/08_airyglyph_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_traum_mountains' data-toggle='collapse'>Traum Mountains</a></h3>
+    <div id='h_traum_mountains' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/09_traum.png'><img src='./maps/09_traum_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_mining_town_of_kirlsa' data-toggle='collapse'>Mining Town of Kirlsa</a></h3>
+    <div id='h_mining_town_of_kirlsa' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/10_kirlsa.png'><img src='./maps/10_kirlsa_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_kirlsa_caverns' data-toggle='collapse'>Kirlsa Caverns</a></h3>
+    <div id='h_kirlsa_caverns' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/11_kirlsa_cavern.png'><img src='./maps/11_kirlsa_cavern_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/12_hauler_puzzle.png'><img src='./maps/12_hauler_puzzle_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_bequerel_mountain_path' data-toggle='collapse'>Bequerel Mountain Path</a></h3>
+    <div id='h_bequerel_mountain_path' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/13_bequerel.png'><img src='./maps/13_bequerel_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_riverfront_village_of_arias' data-toggle='collapse'>Riverfront Village of Arias</a></h3>
+    <div id='h_riverfront_village_of_arias' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/14_arias.png'><img src='./maps/14_arias_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_aire_hillskirlsa_hills' data-toggle='collapse'>Aire Hills/Kirlsa Hills</a></h3>
+    <div id='h_aire_hillskirlsa_hills' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/15_hills.png'><img src='./maps/15_hills_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_granah_hills' data-toggle='collapse'>Granah Hills</a></h3>
+    <div id='h_granah_hills' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/16_granah.png'><img src='./maps/16_granah_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_kirlsa_training_facility' data-toggle='collapse'>Kirlsa Training Facility</a></h3>
+    <div id='h_kirlsa_training_facility' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/17_kirlsa_tf_floor1.png'><img src='./maps/17_kirlsa_tf_floor1_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/18_kirlsa_tf_floor2.png'><img src='./maps/18_kirlsa_tf_floor2_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/19_kirlsa_tf_floor3.png'><img src='./maps/19_kirlsa_tf_floor3_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/20_kirlsa_tf_floor4.png'><img src='./maps/20_kirlsa_tf_floor4_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_palmira_plains' data-toggle='collapse'>Palmira Plains</a></h3>
+    <div id='h_palmira_plains' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/21_palmira.png'><img src='./maps/21_palmira_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_trading_town_of_peterny' data-toggle='collapse'>Trading Town of Peterny</a></h3>
+    <div id='h_trading_town_of_peterny' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/22_peterny.png'><img src='./maps/22_peterny_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_sanmite_steppe' data-toggle='collapse'>Sanmite Steppe</a></h3>
+    <div id='h_sanmite_steppe' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/23_sanmite.png'><img src='./maps/23_sanmite_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_duggus_forest' data-toggle='collapse'>Duggus Forest</a></h3>
+    <div id='h_duggus_forest' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/24_duggus_start.png'><img src='./maps/24_duggus_start_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/25_duggus_mid.png'><img src='./maps/25_duggus_mid_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/26_duggus_end.png'><img src='./maps/26_duggus_end_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_lost_city_of_surferio' data-toggle='collapse'>Lost City of Surferio</a></h3>
+    <div id='h_lost_city_of_surferio' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/27_surferio.png'><img src='./maps/27_surferio_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_irisa_fields' data-toggle='collapse'>Irisa Fields</a></h3>
+    <div id='h_irisa_fields' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/28_irisa.png'><img src='./maps/28_irisa_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_surferio_annex' data-toggle='collapse'>Surferio Annex</a></h3>
+    <div id='h_surferio_annex' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/29_annex.png'><img src='./maps/29_annex_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_sacred_city_of_aquios' data-toggle='collapse'>Sacred City of Aquios</a></h3>
+    <div id='h_sacred_city_of_aquios' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/30_aquios.png'><img src='./maps/30_aquios_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_castle_aquaria' data-toggle='collapse'>Castle Aquaria</a></h3>
+    <div id='h_castle_aquaria' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/31_aquaria_1f.png'><img src='./maps/31_aquaria_1f_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/32_aquaria_2f.png'><img src='./maps/32_aquaria_2f_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_bequerel_mine' data-toggle='collapse'>Bequerel Mine</a></h3>
+    <div id='h_bequerel_mine' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/33_bequerel_part1.png'><img src='./maps/33_bequerel_part1_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/34_bequerel_part2.png'><img src='./maps/34_bequerel_part2_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/35_bequerel_part3.png'><img src='./maps/35_bequerel_part3_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/36_bequerel_refinery.png'><img src='./maps/36_bequerel_refinery_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_war' data-toggle='collapse'>War</a></h3>
+    <div id='h_war' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_sealed_cavern' data-toggle='collapse'>Sealed Cavern</a></h3>
+    <div id='h_sealed_cavern' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/37_cavern.png'><img src='./maps/37_cavern_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_shrine_of_kaddan' data-toggle='collapse'>Shrine of Kaddan</a></h3>
+    <div id='h_shrine_of_kaddan' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/38_kaddan_south.png'><img src='./maps/38_kaddan_south_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/39_kaddan_mid.png'><img src='./maps/39_kaddan_mid_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/40_kaddan_north.png'><img src='./maps/40_kaddan_north_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/41_kaddan_end.png'><img src='./maps/41_kaddan_end_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_passage_from_parch_to_plenty' data-toggle='collapse'>Passage from Parch to Plenty</a></h3>
+    <div id='h_passage_from_parch_to_plenty' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/42_passage.png'><img src='./maps/42_passage_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_mosel_dunes' data-toggle='collapse'>Mosel Dunes</a></h3>
+    <div id='h_mosel_dunes' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/43_mosel_dunes.png'><img src='./maps/43_mosel_dunes_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_ancient_ruins_of_mosel' data-toggle='collapse'>Ancient Ruins of Mosel</a></h3>
+    <div id='h_ancient_ruins_of_mosel' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/44_mosel_ruins.png'><img src='./maps/44_mosel_ruins_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_mountains_of_barr' data-toggle='collapse'>Mountains of Barr</a></h3>
+    <div id='h_mountains_of_barr' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/45_barr_start.png'><img src='./maps/45_barr_start_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/46_barr_mid.png'><img src='./maps/46_barr_mid_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/47_barr_end.png'><img src='./maps/47_barr_end_items.png' class='items'></div><div class='caption'>
+</div></div>
+      <div class='pair'><div class='overlay'><img src='./maps/48_barr_caves.png'><img src='./maps/48_barr_caves_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_ruins_of_barr' data-toggle='collapse'>Ruins of Barr</a></h3>
+    <div id='h_ruins_of_barr' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/49_barr_ruins.png'><img src='./maps/49_barr_ruins_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <h3><a href='#h_urssa_lava_caves' data-toggle='collapse'>Urssa Lava Caves</a></h3>
+    <div id='h_urssa_lava_caves' class='collapse in'>
+      <div class='pair'><div class='overlay'><img src='./maps/50_urssa.png'><img src='./maps/50_urssa_items.png' class='items'></div><div class='caption'>
+</div></div>
+      </div>
+
+    <p>stuff</p>
+
+    <h3><a href='#h_moonbase' data-toggle='collapse'>Moonbase</a></h3>
+    <div id='h_moonbase' class='collapse in'>
+      </div>
+
+    </div>
+
+  <h2><a href='#h_disc_2' data-toggle='collapse'>Disc 2</a></h2>
+  <div id='h_disc_2' class='collapse in'>
     </div>
   </div>
 
 <h1><a href='#h_appendices' data-toggle='collapse'>Appendices</a></h1>
 <div id='h_appendices' class='collapse in'>
   </div>
-<p>Current word count: 1844</p>
+<p>Current word count: 1914</p>
 </div>
