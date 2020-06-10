@@ -186,13 +186,21 @@ window.onload = function wc() {
     <p>About the technical aspects of this guide:</p>
     <ul><li>All header text can be clicked to expand/collapse their respective sections</li>
       <li>Shop titles, boss names, etc can be clicked to expand for more content (respectively store items, boss stats/strategies, etc)</li>
+      <li>You can click on enemy/item names to see their info in the appendix, and you <i>should</i> be able to return to your previous spot by hitting your browser's back button</li>
       <li>All of the banner buttons can be used to change things at any time - just a heads-up though that if you change which PAs you do partway through the game you might not get the ending you want</li>
       <li>For the item location toggle specifically, maps with no items are indicated as such (so you're never stuck with a broken toggle without realizing)</li>
     </ul>
+    <p>About the banner buttons specifically:</p>
+    <ul><li>The "show item locations" toggle only affects maps. Items obtained via talking to NPCs or via story/bosses will be mentioned in text regardless of this setting.</li>
+      <li>The "show battle trophy requirements" mainly affects the details next to boss strategies.</li>
+      <li>The "show inventor unlocks" describes both where to find the inventors and where to get the items to recruit said inventors, at points in the game that they become available</li>
+      <li>The "show encyclopedia unlocks" describes where to get <i>optional</i> unlocks, that is to say, ones that can be missed (sometimes permanently). Encyclopedia entries that are automatically unlocked as part of the story are not covered.</li>
+    </ul>
     <p>About the game-related aspects:</p>
-    <ul><li>All maps come with a legend, but it's the same formatting between all of them</li>
+    <ul><li>Maps are not to-scale compared with each other, they're scaled such that they fit within similar bounding boxes</li>
+      <li>All maps come with a legend, but it's the same formatting between all of them</li>
       <li>All places labeled as "inns" contain save points</li>
-      <li>Any points that cause the plot to continue and halt exploration are noted</li>
+      <li>Any points that cause the plot to continue and halt exploration are noted as such</li>
     </ul>
     </div>
 
@@ -316,6 +324,7 @@ window.onload = function wc() {
     <h3><a href='#h_leaving_vanguard_iii' data-toggle='collapse'>Leaving Vanguard III</a></h3>
     <div id='h_leaving_vanguard_iii' class='collapse in'>
       <p>You'll have some cutscenes in Whipple, after which you're free to leave if you'd like. Before you do so, though, you can talk to the village chief and he'll give you a <a href='#medecentra_pyroxene'>Medecentra Pyroxene</a> as a reward for your actions. It's an accessory that halves the HP cost of battle skills when equipped.</p>
+      <p>This now is your last chance to do anything on this planet before you leave!</p>
       <p>Once that's done, head back to the southern half of Pesotto Forest, specifically the spot just to the southwest of the save point. Make sure to save either here or in the village if you don't want to risk rewatching some of the previous cutscenes.</p>
       <p>Time for some cutscenes, including a weirdly-paced flashback, after which you'll be in a ship with Cliff and Mirage. Speak with Cliff once and with Mirage three times, after which you can leave and enjoy some more cutscenes.</p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#mb_miniboss_inquisitor'>Mini-boss: Inquisitor</a></b></h4></div><div id='mb_miniboss_inquisitor' class='panel-collapse collapse'><div class='panel-body'>
@@ -346,13 +355,14 @@ window.onload = function wc() {
       <p class='trophies'><b>Defeat Giant Crab within 1 minute:</b> Should be really easy if Fayt has Blazing Sword. If not, try to use Aerial instead and set Cliff to manual so he gets stuns in on his own while you pummel the boss.</p>
       <p class='trophies'><b>Defeat Giant Crab without taking damage:</b> Same as with Norton, just stay out of the way and let the CPU handle the rest. If you want it to go a little faster, you can try to join in if you're confidant you can dodge its attacks.</p>
 </div></div></div></div>
-      <p>Go back and save. The last large white patch in the last room is <i>thin ice</i>, which will break if you're not walking. This is done by holding the circle button as you move, <i>not</i> by tilting the left stick more gently. You can now exit the aqueducts and reach the city proper after a cutscene.</p>
+      <p>Go back and save. The large white patch in the last room is <i>thin ice</i>, which will break if you go on it and you're not walking. This is done by holding the circle button as you move, <i>not</i> by tilting the left stick more gently. You can now exit the aqueducts and reach the city proper after a cutscene.</p>
       </div>
 
     <h3><a href='#h_royal_city_of_airyglyph' data-toggle='collapse'>Royal City of Airyglyph</a></h3>
     <div id='h_royal_city_of_airyglyph' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/08_airyglyph.png'><img src='./maps/08_airyglyph_items.png' class='items'></div><div class='caption'>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_grocer_dragon_treasure'>Grocer "Dragon Treasure"</a></b></h4></div><div id='shop_grocer_dragon_treasure' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(bottom-center shop)</p>
       <ul><li>Blueberries (45 Fol)</li>
         <li>Aquaberries (15 Fol)</li>
         <li>Blackberries (35 Fol)</li>
@@ -361,6 +371,7 @@ window.onload = function wc() {
       </ul>
 </div></div></div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_highquality_armorer_tiamat'>High-Quality Armorer "Tiamat"</a></b></h4></div><div id='shop_highquality_armorer_tiamat' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(top-most shop)</p>
       <ul><li>Holy Sword (19600 Fol)</li>
         <li>Osprey Dagger (15100 Fol)</li>
         <li>Broad Axe (15800 Fol)</li>
@@ -369,11 +380,13 @@ window.onload = function wc() {
       </ul>
 </div></div></div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_armorer_lefthanded_lizard'>Armorer "Left-Handed Lizard"</a></b></h4></div><div id='shop_armorer_lefthanded_lizard' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(bottom-left shop)</p>
       <ul><li>Masterwork Plate (24000 Fol)</li>
         <li>Superior Chain Mail (26800 Fol)</li>
       </ul>
 </div></div></div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_outfitter_dragons_dungeon'>Outfitter "Dragon's Dungeon"</a></b></h4></div><div id='shop_outfitter_dragons_dungeon' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(bottom-right shop)</p>
       <ul><li>Compounding Elixirs (120 Fol)</li>
         <li>Cooking Ingredients (120 Fol)</li>
         <li>Silver Ring (1750 Fol)</li>
@@ -595,5 +608,5 @@ window.onload = function wc() {
 <h1><a href='#h_appendices' data-toggle='collapse'>Appendices</a></h1>
 <div id='h_appendices' class='collapse in'>
   </div>
-<p>Current word count: 3105</p>
+<p>Current word count: 3292</p>
 </div>
