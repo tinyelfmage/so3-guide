@@ -1,0 +1,114 @@
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <style>
+        .header {
+            background: #cee8ed;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            text-align: center;
+        }
+        .body {
+            color: #215858;
+            padding-top: 180px;
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        a {
+            color: #6cb9c7;
+        }
+        .pair {
+            display: flex;
+        }
+        .overlay {
+            position: relative;
+            padding-right: 10px;
+            padding-bottom: 10px;
+            z-index: -1;
+        }
+        .overlay .items {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+    </style>
+</head>
+
+<div class="header">
+    <h1>STAR OCEAN 3 COMPREHENSIVE WALKTHROUGH</h1>
+    <select id="s_pa" onchange="pa_select()">
+        <option>Show all PAs</option>
+        <option>Nel & Peppita Routing</option>
+        <option>Albel & Roger Routing</option>
+        <option>Sophia Max Affection Route</option>
+        <option>Cliff Max Affection Route</option>
+        <option>Nel Max Affection Route</option>
+        <option>Roger Max Affection Route</option>
+        <option>Maria Max Affection Route</option>
+        <option>Albel Max Affection Route</option>
+        <option>Peppita Max Affection Route</option>
+        <option>Mirage Max Affection Route</option>
+        <option>Adray Max Affection Route</option>
+    </select><br>
+    <button id="b_items" onclick="toggle('items')">show item locations</button>
+    <button id="b_trophies" onclick="toggle('trophies')">show battle trophy requirements</button>
+    <button id="b_inventor" onclick="toggle('inventor')">show inventor unlocks</button>
+    <button id="b_encyclopedia" onclick="toggle('encyclopedia')">show encyclopedia unlocks</button>
+    <br>
+    <button onclick="expand()">expand all</button>
+    <button onclick="collapse()">collapse all</button>
+</div>
+
+<script>
+function toggle(category) {
+    console.log(category);
+    var b = document.getElementById("b_" + category);
+    var elems = document.getElementsByClassName(category);
+    
+    if (elems.item(0).style.display === "none") {
+        b.style.background="#55dc9b";
+        for (var i in elems) { elems.item(i).style.display = "block"; }
+    } else {
+        b.style.background="#fff";
+        for (var i in elems) { elems.item(i).style.display = "none"; }
+    }
+}
+    
+function pa_select() {
+    function togl(char) {
+        var elements = document.getElementsByClassName("pa");
+        for (var i in elements) {
+            var elem = elements.item(i);
+            if(char == "all" || elem.getAttribute("char").includes(char)) { elem.style.display = "block";
+            } else { elem.style.display = "none"; }
+        }
+    }
+    
+    var val = document.getElementById("s_pa").selectedIndex;
+    switch(val) {
+        case 0: togl("all"); break;
+        case 1: togl("girl"); break;
+        case 2: togl("boy"); break;
+        case 3: togl("sophia"); break;
+        case 4: togl("cliff"); break;
+        case 5: togl("nel"); break;
+        case 6: togl("roger"); break;
+        case 7: togl("maria"); break;
+        case 8: togl("albel"); break;
+        case 9: togl("peppita"); break;
+        case 10: togl("mirage"); break;
+        case 11: togl("adray"); break;
+    }
+}
+    
+function expand() { $(".collapse").collapse("show"); }
+function collapse() { $(".collapse").collapse("hide"); }
+    
+window.onload = function wc() {
+    var togls = ["items", "trophies", "inventor", "encyclopedia"]
+    for (var x in togls) { toggle(togls[x]); }
+}
+</script>
+

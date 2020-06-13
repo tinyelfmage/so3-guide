@@ -1,0 +1,41 @@
+TAG LIST:
+- paX#char#content
+- map#name
+- tog#items, tog#trophies, tog#inventor, tog#encyclopedia
+- sec#shop, sec#boss
+
+TODO:
+- link items? yea/nay? (also enemies?)
+
+categories to filter:
+- ending choice (mutually exclusive)
+    - [character name] for every character
+    - nel/peppita vs albel/roger routes w most general options
+    - "see all PAs" w values
+- notable crafting opportunities
+- inventor unlocks (including crafting reqs)
+- encyclopedia unlocks
+
+collapsable:
+- each section/chapter/whatever i wanna call it
+- shop contents
+- chest locations
+- boss strats?
+
+etc:
+- note which maps can/cant be 100% on the first visit
+- note map completion rewards
+- note battle trophies
+
+- link other faqs as source where relevant
+- remember to check (and link to) that one crafting website
+- check whether all inns have save points or not
+- check exact timing of battle trophy saves
+- check room numbers for evac map
+- check nobleman flee stuff
+- check when airyglyph castle and woltar's mansion become accessible (after picking up albel?)
+- check which houses you can enter in airyglyph
+- edit kirlsa map to have exits labeled
+- indicate one-way door on kirlsa cavern map
+- add hauler start/stop/etc info to the hauler caverns map
+- check what's in the NE corner of bequerel mountain path

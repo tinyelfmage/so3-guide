@@ -1,0 +1,467 @@
+h2#Preface
+Hi, I'm <a href="https://twitter.com/divinebenis">Aurel (paranoodle)</a> and I'm autistic and Star Ocean 3 is one of my special interests. I replay it pretty often, sometimes winging it and sometimes with a guide when I want to get specific endings/etc. And there's some really good guides around on GameFAQs, but almost every time I've needed to have 3+ open at once while I cross-reference things, so I've decided to try to make my own "all-in-one" walkthrough of sorts, taking advantage of scripting to give readers toggles for what parts they do/don't want covered.
+That said I'll link to the more in-depth FAQs/walkthroughs that cover things this guide doesn't cover, especially for the more complicated topics like Item Creation or how the AI works.
+
+h3#On Spoilers
+This guide aims to be as spoiler-free as possible, but some concessions have to be made for simplicity's sake. Any and all <i>story</i> spoilers will be avoided, but due to how guides work there will be mechanics-related spoilers such as revealing which characters become party members, when certain abilities unlock, etc.
+That said, things like puzzle solutions will always be under a block so you can reveal them as you'd like, but don't risk seeing on accident if you want to solve them yourself.
+##
+##
+
+h2#Game mechanics
+
+h3#Optional Party Members
+Star Ocean 3 has 6 mandatory party members (as in, no matter what you do, they'll always join your party), and 4 optional party members. Of those optional party members, you can only ever recruit <b>two</b> in a given playthrough, for a total of 8 party members.
+-The mandatory party members are all obtained automatically as you progress through the story (and Adray is the only one whose timing can vary based on player choices)
+-The first optional party member is "locked in" at a specific point in the story, with Roger's requirement taking priority over Albel's, and Nel acting as a default if neither requirements were met
+-The second optional party member can either be Peppita, when given the option to recruit her automatically during the story, or if she wasn't recruited, one of Roger, Albel or Nel, each with a specific sidequest later on in the game
+--
+We'll cover the exact requirements for optional party members as it becomes relevant in-game.
+##
+
+h3#Private Actions
+Private Actions (PAs) are scenes that change party members' Affection Points (AP). They usually come in one of two varieties: dialogue options in cutscenes (either as part of the main story or sidequests), or just talking/interacting with an item/character at a given point. The latter means that depending on your goals sometimes you'll want to be careful <i>not</i> to talk to someone.
+The main use of PAs (other than roleplaying) is that AP is what determines which character's ending you get come the end of the game. The requirements for getting a character's ending are:
+-They must be a party member, though they don't have to be in the active party (this only applies to the optional party members: Nel, Roger, Albel, and Peppita)
+-Fayt's affection for the character must be 21 or higher
+-The character's affection for Fayt must be 50 or higher
+--
+If more than one character meets these criteria, then you get the ending of whoever has the highest affection for Fayt. If <i>none</i> of the characters meet these criteria, then you get Fayt's solo ending.
+Outside that, AP is also relevant during gameplay itself, in one of two ways:
+-If A has high affection for B, and B dies in combat, A will get a unique voice line and go into the "angry" state, where they deal double damage for a short time
+-AP determines healing priority, so if both A and B are at critical HP, but C has higher affection for A than B, they'll heal A first
+--
+Neither of these are important on a casual playthrough, but they can become relevant when min-maxing.
+For this guide, you can use the drop-down at the top of the screen to pick which PAs you'd like to be guided to, with "Show all PAs" as an option if you just want to know what your options are as you go. The other options are:
+-<b>Nel & Peppita Route</b> is the general route to follow if you'd like to get the endings of <i>Sophia, Cliff, Nel, Peppita, or Mirage</i>. It involves picking up Nel and Peppita as your optional party members, and allows you to reload the game before the final boss and use affection-lowering items to change which ending you see.
+-<b>Albel & Roger Route</b> is similar, but for getting the endings of <i>Maria, Roger, Albel, or Adray</i>. It involves picking up Albel and Roger as the two optional party members. Both this route and the previous one also allow for getting Fayt's solo ending instead.
+-<b>[Name] Max Affection Route</b> is for if you'd like to go ham and get as many AP as possible on a given character. It's not as versatile as the other two but it means you can take any optional characters you'd like. If you know what ending you want to get, and you're not interested in one of the "standard" routes listed above, this is the option for you.
+--
+##
+
+h3#Battle Trophies
+Since the PS2 didn't natively have achievements, battle trophies are Star Ocean 3's implementation of them. They're saved onto a memory card, but are independent of any specific save file. This means they carry across playthroughs, and across saves in general (so if a boss has two mutually exclusive battle trophies, you can get them both by reloading a pre-boss save again after obtaining the first one).
+!<b>Important note:</b> Battle trophies require playing on the Galaxy difficulty or above, and <i>must</i> be turned on in the battle simulator at the very start of the game. If you miss this, you won't be able to obtain any and the system essentially won't exist for that playthrough.
+##
+
+h3#Map Completion
+While "town" maps are all complete as soon as you first enter (as well as some unique event maps), that doesn't hold true for field/dungeon maps. You start with a blank map that automatically fills out around where you've walked, and reaching 99% completion on a map will award you one of three items.
+- Most field maps grant a 1/144 Scale Bunny
+- Most dungeon maps grant a 1/60 Scale Bunny
+- Some specific field/dungeon maps grant 1/1 Scale Bunny
+--
+The 1/144 Scale Bunny and 1/60 Scale Bunny both increase your combat movement speed by 5%, but neither of them stack with each other <i>or</i> dupes of themselves, so there's no point in keeping more than one bunny and you can just sell the extra for a hefty sum. The 1/1 Scale Bunny cuts your combat movement speed by half, but is worth a significantly higher amount of money.
+Do note that when going for map completion, the area that gets filled out where you walk is relatively small, and the map itself tends to extend out a little around its borders, so you'll need to hug the walls quite a bit to reach 99%+.
+Some areas can be completed on your first visit, but some will require more than one, either due to some areas being locked behind story progress directly, or due to requiring a mid-game item that destroys damaged walls. We'll point out which map completions can be obtained when.
+##
+
+##
+
+h1#Walkthrough
+
+h2#How to read the walkthrough
+About the technical aspects of this guide:
+-All header text can be clicked to expand/collapse their respective sections
+-Shop titles, boss names, etc can be clicked to expand for more content (respectively store items, boss stats/strategies, etc)
+-You can click on enemy/item names to see their info in the appendix, and you <i>should</i> be able to return to your previous spot by hitting your browser's back button
+-All of the banner buttons can be used to change things at any time - just a heads-up though that if you change which PAs you do partway through the game you might not get the ending you want
+-For the item location toggle specifically, maps with no items are indicated as such (so you're never stuck with a broken toggle without realizing)
+--
+About the banner buttons specifically:
+-The "show item locations" toggle only affects maps. Items obtained via talking to NPCs or via story/bosses will be mentioned in text regardless of this setting.
+-The "show battle trophy requirements" mainly affects the details next to boss strategies.
+-The "show inventor unlocks" describes both where to find the inventors and where to get the items to recruit said inventors, at points in the game that they become available
+-The "show encyclopedia unlocks" describes where to get <i>optional</i> unlocks, that is to say, ones that can be missed (sometimes permanently). Encyclopedia entries that are automatically unlocked as part of the story are not covered.
+--
+About the game-related aspects:
+-Maps are not to-scale compared with each other, they're scaled such that they fit within similar bounding boxes
+-All maps come with a legend, but it's the same formatting between all of them
+-All places labeled as "inns" contain save points
+-Any points that cause the plot to continue and halt exploration are noted as such
+--
+##
+
+h2#Disc 1
+
+h3#Grantier Resort Hotel
+[map goes here, no completion]
+map#00_grantier
+pa1#all#Check the trash can in room 105.
+tog#items#
+pam#
+##
+
+h3#Evacuation Facility
+map#01_evac
+pam#
+##
+
+h3#Transport Ship Helre
+map#02_helre
+pam#
+##
+
+h3#Pesotto Forest
+map#03_pesotto
+sec#pesotto#Enemies
+-{Young Slime} - fairly trivial enemy, slow attacks
+-{Nobleman} - fairly trivial as well, they can't actually damage you
+--
+ces#
+!<b>Map Completion Reward:</b> 1/144 Scale Bunny (you can only cover around 98% on your very first outing, but the last 1% is feasible as soon as you unlock the next non-town area)
+This is the first map with map completion, and you'll be able to complete it pretty fast outside one small area in the northwest corner of the northern half of the map, which is currently blocked off by NPCs. Remember to hug the walls! The Bunny reward from this map sells for 9000 Fol, making it a great way to get some quick money early (and can be used to cheese some content a bit later if you so choose).
+As noted on the map, you can heal yourself next to the save point, but unlike most other recovery points in the game, it's not a circle on the ground like the save point, but requires interacting with the pod. Feel free to use it as often as you need, especially if you're using the monsters in this area to get a feel for the combat system.
+Once you're ready to proceed through this area, head north to Whipple Village.
+pam#
+##
+
+h3#Whipple Village
+map#04_whipple
+sec#shop#General Store "Manybloom"
+-Blueberries (45 Fol)
+-Blackberries (35 Fol)
+-Ring Mail (180 Fol)
+-Clone Generator (350 Fol)
+-Fresh Sage (310 Fol)
+-Pomello Juice (32718 Fol)
+--
+ces#
+!<b>No map completion</b>
+Once you're done with cutscenes, to continue the plot:
+-Talk to the girl in the house just north of the general store
+-Talk to the chief in the house labeled "inn"
+-Go back to the house you started in
+--
+You're now free to leave the village. Make sure to pick up any items you'd like, as well as purchase anything interesting. The Pomello Juice is completely irrelevant at this stage in the game, but the Ring Mail is worth taking a look at if you're having trouble avoiding hits.
+pam#
+Next up:
+-Leave the village and go back down to the save point in Pesotto Forest, you'll get a scene when you interact with the pod
+-Return to Whipple again, and go back to the house in the bottom-right corner
+-Exit the house again
+--
+At this point, I'd recommend saving at the elder's house (inn), because we'll be heading into our first proper dungeon! Head back out of the village, and you'll notice the NPCs previously blocking the way to the Ruins of Coffir are now gone.
+This also marks the earliest point at which you can 100% the Pesotto Forest map, and it's the best possible time to do so as there's no story triggers in that area at the moment.
+##
+
+h3#Ruins of Coffir
+map#05_coffir
+sec#coffir#Enemies
+-{Nobleman} - same as Pesotto Forest
+-{Thieving Scumbag} - Will try to flee when they hit 50% HP, focus on them first if you don't want to lose experience points
+-{Shrieker} - Deals MP damage
+-{Young Shrieker} - Can poison you
+--
+ces#
+!<b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until much later in the game)
+As mentioned just above, this map can't be completed just yet - the areas marked in red need to be destroyed using an item we won't have until later in the game. This means the entire greyed-out areas of the map are inaccessible at the moment.
+(As such, the items found there aren't listed at the moment, they'll be included next time we visit the ruins)
+Explore to your heart's content, after which your goal is Norton's Hideout, in the northmost part of the map. Go around the back of the building, via the right side, to find the entrance (and a cutscene, and a mini-boss battle).
+sec#mb#Mini-Boss: Buster, Makafy, and Tepeki
+No notable weaknesses on either three, they're basically just named and slightly buffed versions of the {Thieving Scumbag} enemies.
+tog#trophies#No battle trophies for this fight.
+ces#
+Defeating this miniboss nets you the {Beat-Up Textbook}, a unique item that unlocks your first {Anti-Attack Aura}. From now on, whenever you're at 100% Fury and a light attack hits you, you won't take damage and your aura will activate instead. This one specifically stuns your attacker for a short time.
+pam#
+##
+
+h3#Norton's Hideout
+map#06_norton
+sec#norton#Enemies
+-{Nobleman}
+-{Thieving Scumbag}
+-{Skeleton Warrior} - 
+--
+ces#
+Head for the room with the save point, watch the cutscene, and you'll find a terminal in the southwest corner. There's a small puzzle to unlock the door to the last room in the hideout.
+sec#norton#Puzzle Hint
+If you want to do the puzzle yourself but aren't sure where to start, go look for the graffiti on the walls of the ruins. One of them is fairly close to the entrance and visible when facing north (default camera position, you can reset with the start button). There's two more.
+ces#
+sec#norton#Puzzle Solution
+If you just want the solution: the password is "256".
+ces#
+pam#
+Regardless of how you solved the puzzle, save your game, then enter the southeast room in the hideout. You'll see a cutscene and start your first boss battle.
+sec#b#Boss: Norton
+Don't try to MP-kill him, he's resistant to fire (the only source of MP damage you can have at this point) and has over 35000 MP, as opposed to his 1600 HP. Focus on avoiding his gunfire and get hits in when you can, and he'll drop soon enough.
+tog#trophies#<b>Defeat Norton within 30 seconds:</b> Spam Blade of Fury (get a cancel bonus going if you can), or spam Cliff's light attack. Either should finish the fight within the time limit, and Norton's dying speech doesn't count.
+tog#trophies#<b>Defeat Norton without taking damage:</b> This <i>only</i> applies to the character you're currently controlling, so just run to the bottom of the screen and let Cliff handle the fight for you. Use items on him if you need to, just try to stay out of Norton's way.
+ces#
+Now that you're done, watch the cutscene, then return to the room with the save point. Save if you need to, but we won't be running into anything more than wandering enemies for a bit.
+Exit the hideout, watch a cutscene, then exit the ruins and go back to Whipple.
+##
+
+h3#Leaving Vanguard III
+You'll have some cutscenes in Whipple, after which you're free to leave if you'd like. Before you do so, though, you can talk to the village chief and he'll give you a {Medecentra Pyroxene} as a reward for your actions. It's an accessory that halves the HP cost of battle skills when equipped.
+This is now your last chance to do anything on this planet before you leave!
+Once that's done, head back to the southern half of Pesotto Forest, specifically the spot just to the southwest of the save point. Make sure to save either here or in the village if you don't want to risk rewatching some of the previous cutscenes.
+Time for some cutscenes, including a weirdly-paced flashback, after which you'll be in a ship with Cliff and Mirage. Speak with Cliff once and with Mirage three times, after which you can leave and enjoy some more cutscenes.
+sec#mb#Mini-boss: Inquisitor
+Now that you have a full three-person party, this fight is pretty easy. Kill the soldiers first, then focus on the inquisitor. Nel can heal you if you ever need it.
+ces#
+##
+
+h3#Airyglyph Aqueducts
+map#07_aqueduct
+sec#aqueduct#Enemies
+-{Bogle Leader}
+-{Bogle Soldier}
+-{Skeleton Soldier}
+-{Slime}
+-{Toad Beast}
+-{Water Reaper}
+--
+ces#
+!<b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until later in the game)
+Now that you're out of there, welcome to the second dungeon of the game! You start off next to the save point, and the blue/white circle next to it will heal you if you stand on it. So as with Pesotto Forest, if you want to get a better feel for combat, practice using Cliff or Nel, or grind a little bit, this is a good spot for it.
+As with the Coffir ruins, the areas marked in red are destroyable, but we don't have anything with which to destroy them yet. The lighter parts of them (on the map) though are <i>arches</i>, meaning we can walk under them, though it's not necessarily obvious to see depending on your camera angle.
+pam#
+Make your way across the map towards the first white patch, which is a slippery ice slope. Both this and the next white patch will make you slip downwards when you walk on them, and hitting the wall too fast will make Fayt fall over and you'll reappear at the top of the slope. Just either hold right while slipping, or hold up and step off before you hit the wall, and you'll be fine. If you need to walk back up, hold circle as you walk and you won't slip.
+Save your game, and get ready for the boss of this dungeon.
+sec#b#Boss: Giant Crab
+Immune to water damage, but weak to fire. It also has only 80MP so if you have Blazing Sword on Fayt, this fight is a cakewalk. It's rather slow, so focus on avoiding its strong attacks, whereas for its weak attacks you can either try to avoid them, or keep your fury high so it hits you at 100% and gets stunned.
+tog#trophies#<b>Defeat Giant Crab within 1 minute:</b> Should be really easy if Fayt has Blazing Sword. If not, try to use Aerial instead and set Cliff to manual so he gets stuns in on his own while you pummel the boss.
+tog#trophies#<b>Defeat Giant Crab without taking damage:</b> Same as with Norton, just stay out of the way and let the CPU handle the rest. If you want it to go a little faster, you can try to join in if you're confidant you can dodge its attacks.
+ces#
+Go back and save if you need to, we're almost out. The large white patch in the last room is <i>thin ice</i>, which will break if you go on it and you're not walking. This is done by holding the circle button as you move, <i>not</i> by tilting the left stick more gently. You can now exit the aqueducts and reach the city proper after a cutscene.
+##
+
+h3#Royal City of Airyglyph
+map#08_airyglyph
+sec#shop#Grocer "Dragon Treasure"
+(bottom-center shop)
+-Blueberries (45 Fol)
+-Aquaberries (15 Fol)
+-Blackberries (35 Fol)
+-Gooseberry Juice (3100 Fol)
+-Steamed Bun (200 Fol)
+--
+ces#
+sec#shop#High-Quality Armorer "Tiamat"
+(top-most shop)
+-Holy Sword (19600 Fol)
+-Osprey Dagger (15100 Fol)
+-Broad Axe (15800 Fol)
+-Nodachi (24000 Fol)
+-Damask Gauntlet (44000 Fol)
+--
+ces#
+sec#shop#Armorer "Left-Handed Lizard"
+(bottom-left shop)
+-Masterwork Plate (24000 Fol)
+-Superior Chain Mail (26800 Fol)
+--
+ces#
+sec#shop#Outfitter "Dragon's Dungeon"
+(bottom-right shop)
+-Compounding Elixirs (120 Fol)
+-Cooking Ingredients (120 Fol)
+-Silver Ring (1750 Fol)
+-Clone Generator (350 Fol)
+-Basil (20 Fol)
+-Sage (20 Fol)
+-Lavender (20 Fol)
+-Fresh Sage (310 Fol)
+--
+ces#
+You'll notice the equipment prices are prohibitedly expensive. This is an area we'll spend more time in later in the game, for now we're just passing through. <i>That said</i>, you can take advantage of this and get some midgame weapons early if you're interested in lowering the overall game difficulty, by selling bunnies from map completion rewards. You'll need two of them, and at this point you only have at most one, but you can get a second in the next area.
+There isn't a lot to do in the city just yet other than any basic shopping you need, as well as talking to NPCs. The castle is locked off for now, as the guards won't let you in. Grab any treasure if you'd like, save at the inn, and head out the East exit when you're ready.
+pam#
+##
+
+h3#Traum Mountains
+map#09_traum
+pam#
+sec#aqueduct#Enemies
+-a
+--
+ces#
+!<b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)
+First off is a cutscene that will drop you off a little ways from the Kirlsa entrance. You can technically already complete the map now, but you'll run into another cutscene if you head East and it's almost impossible to hit 99% without triggering it, so the easiest time to grab map completion is after a handful of cutscenes in the next area.
+Most of the monsters on the Kirlsa side of the mountains are fine to fight, but heading towards Airyglyph will pit you against enemies you're unlikely to win against at this point in time, so it's best to avoid them completely, or at worst run away from combat.
+Anytime you're ready to progress, just head for Kirlsa.
+##
+
+h3#Mining Town of Kirlsa
+map#10_kirlsa
+Once you're done with cutscenes, you're locked into this map until you progress a little more into the story. The northeast section of town is locked off until another several hours from now, the guards won't let you pass the gates. A guard also blocks off the northern path out of town, but he's only there until we finish our business here.
+Do any shopping you'd like, talk to NPCs, and once you're ready to progress, go down the stairs in the southwest corner of the town and talk to the Sermonic Old Man, then go up to the cemetery (north of the inn, up the stairs) and watch a cutscene there.
+Once you're done with that, starting the next morning you'll be allowed to leave town via the north exit.
+sec#holysword#Easy mode
+!<i>That said</i>, as mentioned in the previous section, if you're interested in getting some overpowered weapons, now is the best time to do it. Kirlsa's west exit has also opened back up, meaning you're free to backtrack to Airyglyph if you'd like, and you can sell the map completion rewards from Pesotto Forest and Traum Mountains for a cool 18000 Fol total. This is just under the amount you need to buy the {Holy Sword}, which is by far the best weapon you can get for Fayt at this stage in the game.
+If you don't play Fayt you might be tempted by one of the other weapons, but the {Damask Gauntlet} is absurdly overpriced (and not to be confused with {Damask Gauntlets}, another one of Cliff's weapons) and the {Osprey Dagger} will make a less significant upgrade to Nel than the Holy Sword would to Fayt.
+ces#
+pam#
+##
+
+h3#Kirlsa Caverns
+map#11_kirlsa_cavern
+Welcome to the Kirlsa cavern! This is the first dungeon in the game that's big enough to require two different maps, but the second involves a... minigame/puzzle, of sorts.
+As with a number of the maps so far, several areas on this first map are currently blocked off on account of us not having anything to destroy rocks with.
+The path through this first map is fairly straightforward, just head to the save point via the east route, heal, and save in preparation for the boss.
+pam#
+map#12_hauler_puzzle
+Thankfully, no map completion for this puzzle! It's already messy enough without that.
+pam#
+##
+
+h3#Bequerel Mountain Path
+map#13_bequerel
+pam#
+##
+
+h3#Riverfront Village of Arias
+map#14_arias
+pam#
+##
+
+h3#Aire Hills/Kirlsa Hills
+map#15_hills
+pam#
+##
+
+h3#Granah Hills
+map#16_granah
+pam#
+##
+
+h3#Kirlsa Training Facility
+map#17_kirlsa_tf_floor1
+pam#
+map#18_kirlsa_tf_floor2
+pam#
+map#19_kirlsa_tf_floor3
+pam#
+map#20_kirlsa_tf_floor4
+pam#
+##
+
+h3#Palmira Plains
+map#21_palmira
+pam#
+##
+
+h3#Trading Town of Peterny
+map#22_peterny
+pam#
+##
+
+h3#Sanmite Steppe
+map#23_sanmite
+pam#
+##
+
+h3#Duggus Forest
+map#24_duggus_start
+pam#
+map#25_duggus_mid
+pam#
+map#26_duggus_end
+pam#
+##
+
+h3#Lost City of Surferio
+map#27_surferio
+pam#
+##
+
+h3#Irisa Fields
+map#28_irisa
+pam#
+##
+
+h3#Surferio Annex
+map#29_annex
+pam#
+##
+
+h3#Sacred City of Aquios
+map#30_aquios
+pam#
+##
+
+h3#Castle Aquaria
+map#31_aquaria_1f
+pam#
+map#32_aquaria_2f
+pam#
+##
+
+h3#Bequerel Mine
+map#33_bequerel_part1
+pam#
+map#34_bequerel_part2
+pam#
+map#35_bequerel_part3
+pam#
+map#36_bequerel_refinery
+pam#
+##
+
+h3#War
+##
+
+h3#Sealed Cavern
+map#37_cavern
+pam#
+##
+
+h3#Shrine of Kaddan
+map#38_kaddan_south
+pam#
+map#39_kaddan_mid
+pam#
+map#40_kaddan_north
+pam#
+map#41_kaddan_end
+pam#
+##
+
+h3#Passage from Parch to Plenty
+map#42_passage
+pam#
+##
+
+h3#Mosel Dunes
+map#43_mosel_dunes
+pam#
+##
+
+h3#Ancient Ruins of Mosel
+map#44_mosel_ruins
+pam#
+##
+
+h3#Mountains of Barr
+map#45_barr_start
+pam#
+map#46_barr_mid
+pam#
+map#47_barr_end
+pam#
+map#48_barr_caves
+pam#
+##
+
+h3#Ruins of Barr
+map#49_barr_ruins
+pam#
+##
+
+h3#Urssa Lava Caves
+map#50_urssa
+pam#
+##
+
+stuff
+
+h3#Moonbase
+##
+
+##
+
+h2#Disc 2
+##
+##
+
+h1#Appendices
+##
