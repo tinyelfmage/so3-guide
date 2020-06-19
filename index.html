@@ -81,7 +81,7 @@ function pa_select() {
         var elements = document.getElementsByClassName("pa");
         for (var i in elements) {
             var elem = elements.item(i);
-            if(char == "all" || elem.getAttribute("char").includes(char)) { elem.style.display = "block";
+            if(elem.getAttribute("char").includes(char)) { elem.style.display = "block";
             } else { elem.style.display = "none"; }
         }
     }
@@ -112,16 +112,67 @@ window.onload = function wc() {
 }
 </script>
 
-<div class="body" id="body"><div class='toc'><big><b>Table of Contents</b></big><br>&nbsp;<b><a href='#h_preface'>Preface</a></b> | <a href='#h_on_spoilers'>On Spoilers</a><br>&nbsp;<b><a href='#h_game_mechanics'>Game mechanics</a></b> | <a href='#h_optional_party_members'>Optional Party Members</a> | <a href='#h_private_actions'>Private Actions</a> | <a href='#h_battle_trophies'>Battle Trophies</a> | <a href='#h_map_completion'>Map Completion</a><br><b><big><a href='#h_walkthrough'>Walkthrough</a></big></b><br>&nbsp;<b><a href='#h_how_to_read_the_walkthrough'>How to read the walkthrough</a></b><br>&nbsp;<b><a href='#h_disc_1'>Disc 1</a></b> | <a href='#h_grantier_resort_hotel'>Grantier Resort Hotel</a> | <a href='#h_evacuation_facility'>Evacuation Facility</a> | <a href='#h_transport_ship_helre'>Transport Ship Helre</a> | <a href='#h_pesotto_forest'>Pesotto Forest</a> | <a href='#h_whipple_village'>Whipple Village</a> | <a href='#h_ruins_of_coffir'>Ruins of Coffir</a> | <a href='#h_nortons_hideout'>Norton's Hideout</a> | <a href='#h_leaving_vanguard_iii'>Leaving Vanguard III</a> | <a href='#h_airyglyph_aqueducts'>Airyglyph Aqueducts</a> | <a href='#h_royal_city_of_airyglyph'>Royal City of Airyglyph</a> | <a href='#h_traum_mountains'>Traum Mountains</a> | <a href='#h_mining_town_of_kirlsa'>Mining Town of Kirlsa</a> | <a href='#h_kirlsa_caverns'>Kirlsa Caverns</a> | <a href='#h_bequerel_mountain_path'>Bequerel Mountain Path</a> | <a href='#h_riverfront_village_of_arias'>Riverfront Village of Arias</a> | <a href='#h_aire_hillskirlsa_hills'>Aire Hills/Kirlsa Hills</a> | <a href='#h_granah_hills'>Granah Hills</a> | <a href='#h_kirlsa_training_facility'>Kirlsa Training Facility</a> | <a href='#h_palmira_plains'>Palmira Plains</a> | <a href='#h_trading_town_of_peterny'>Trading Town of Peterny</a> | <a href='#h_sanmite_steppe'>Sanmite Steppe</a> | <a href='#h_duggus_forest'>Duggus Forest</a> | <a href='#h_lost_city_of_surferio'>Lost City of Surferio</a> | <a href='#h_irisa_fields'>Irisa Fields</a> | <a href='#h_surferio_annex'>Surferio Annex</a> | <a href='#h_sacred_city_of_aquios'>Sacred City of Aquios</a> | <a href='#h_castle_aquaria'>Castle Aquaria</a> | <a href='#h_bequerel_mine'>Bequerel Mine</a> | <a href='#h_war'>War</a> | <a href='#h_sealed_cavern'>Sealed Cavern</a> | <a href='#h_shrine_of_kaddan'>Shrine of Kaddan</a> | <a href='#h_passage_from_parch_to_plenty'>Passage from Parch to Plenty</a> | <a href='#h_mosel_dunes'>Mosel Dunes</a> | <a href='#h_ancient_ruins_of_mosel'>Ancient Ruins of Mosel</a> | <a href='#h_mountains_of_barr'>Mountains of Barr</a> | <a href='#h_ruins_of_barr'>Ruins of Barr</a> | <a href='#h_urssa_lava_caves'>Urssa Lava Caves</a> | <a href='#h_moonbase'>Moonbase</a><br>&nbsp;<b><a href='#h_disc_2'>Disc 2</a></b><br><b><big><a href='#h_appendices'>Appendices</a></big></b></div>
-<h2><a href='#h_preface' data-toggle='collapse'>Preface</a></h2>
-<div id='h_preface' class='collapse in'>
-    <p>Hi, I'm <a href="https://twitter.com/divinebenis">Aurel (paranoodle)</a> and I'm autistic and Star Ocean 3 is one of my special interests. I replay it pretty often, sometimes winging it and sometimes with a guide when I want to get specific endings/etc. And there's some really good guides around on GameFAQs, but almost every time I've needed to have 3+ open at once while I cross-reference things, so I've decided to try to make my own "all-in-one" walkthrough of sorts, taking advantage of scripting to give readers toggles for what parts they do/don't want covered.</p>
-    <p>That said I'll link to the more in-depth FAQs/walkthroughs that cover things this guide doesn't cover, especially for the more complicated topics like Item Creation or how the AI works.</p>
+<div class="body" id="body"><div class='toc'><big><b>Table of Contents</b></big><br>&nbsp;<b><a href='#h_about_the_guide'>About the guide</a></b> | <a href='#h_preface'>Preface</a> | <a href='#h_guide_progress'>Guide Progress</a> | <a href='#h_change_logs'>Change logs</a> | <a href='#h_on_spoilers'>On Spoilers</a> | <a href='#h_sourcescredits'>Sources/credits</a><br>&nbsp;<b><a href='#h_game_mechanics'>Game mechanics</a></b> | <a href='#h_optional_party_members'>Optional Party Members</a> | <a href='#h_private_actions'>Private Actions</a> | <a href='#h_battle_trophies'>Battle Trophies</a> | <a href='#h_map_completion'>Map Completion</a><br>&nbsp;<b><a href='#h_frequently_asked_questions'>Frequently Asked Questions</a></b><br><b><big><a href='#h_walkthrough'>Walkthrough</a></big></b><br>&nbsp;<b><a href='#h_how_to_read_the_walkthrough'>How to read the walkthrough</a></b><br>&nbsp;<b><a href='#h_disc_1_story'>Disc 1 Story</a></b> | <a href='#h_grantier_resort_hotel'>Grantier Resort Hotel</a> | <a href='#h_evacuation_facility'>Evacuation Facility</a> | <a href='#h_transport_ship_helre'>Transport Ship Helre</a> | <a href='#h_pesotto_forest'>Pesotto Forest</a> | <a href='#h_whipple_village'>Whipple Village</a> | <a href='#h_ruins_of_coffir'>Ruins of Coffir</a> | <a href='#h_nortons_hideout'>Norton's Hideout</a> | <a href='#h_leaving_vanguard_iii'>Leaving Vanguard III</a> | <a href='#h_airyglyph_aqueducts'>Airyglyph Aqueducts</a> | <a href='#h_royal_city_of_airyglyph'>Royal City of Airyglyph</a> | <a href='#h_traum_mountains'>Traum Mountains</a> | <a href='#h_mining_town_of_kirlsa'>Mining Town of Kirlsa</a> | <a href='#h_kirlsa_caverns'>Kirlsa Caverns</a> | <a href='#h_bequerel_mountain_path'>Bequerel Mountain Path</a> | <a href='#h_riverfront_village_of_arias'>Riverfront Village of Arias</a> | <a href='#h_aire_hillskirlsa_hills'>Aire Hills/Kirlsa Hills</a> | <a href='#h_granah_hills'>Granah Hills</a> | <a href='#h_kirlsa_training_facility'>Kirlsa Training Facility</a> | <a href='#h_palmira_plains'>Palmira Plains</a> | <a href='#h_trading_town_of_peterny'>Trading Town of Peterny</a> | <a href='#h_sanmite_steppe'>Sanmite Steppe</a> | <a href='#h_duggus_forest'>Duggus Forest</a> | <a href='#h_lost_city_of_surferio'>Lost City of Surferio</a> | <a href='#h_irisa_fields'>Irisa Fields</a> | <a href='#h_surferio_annex'>Surferio Annex</a> | <a href='#h_sacred_city_of_aquios'>Sacred City of Aquios</a> | <a href='#h_castle_aquaria'>Castle Aquaria</a> | <a href='#h_bequerel_mine'>Bequerel Mine</a> | <a href='#h_war'>War</a> | <a href='#h_sealed_cavern'>Sealed Cavern</a> | <a href='#h_shrine_of_kaddan'>Shrine of Kaddan</a> | <a href='#h_passage_from_parch_to_plenty'>Passage from Parch to Plenty</a> | <a href='#h_mosel_dunes'>Mosel Dunes</a> | <a href='#h_ancient_ruins_of_mosel'>Ancient Ruins of Mosel</a> | <a href='#h_mountains_of_barr'>Mountains of Barr</a> | <a href='#h_ruins_of_barr'>Ruins of Barr</a> | <a href='#h_urssa_lava_caves'>Urssa Lava Caves</a><br>&nbsp;<b><a href='#h_disc_2_story'>Disc 2 Story</a></b> | <a href='#h_diplomatic_flagship_diplo'>Diplomatic Flagship Diplo</a> | <a href='#h_battleship_aquaelie'>Battleship Aquaelie</a> | <a href='#h_moonbase'>Moonbase</a> | <a href='#h_styx'>Styx</a> | <a href='#h_arkives'>Arkives</a> | <a href='#h_gemity'>Gemity</a> | <a href='#h_tons_of_optional_backtracking_and_sidequests'>tons of optional backtracking and sidequests</a> | <a href='#h_sphere_211_floors_16'>Sphere 211 (floors 1-6)</a> | <a href='#h_styx_again'>Styx (again)</a> | <a href='#h_kaddan_again'>Kaddan (again)</a> | <a href='#h_firewall'>Firewall</a> | <a href='#h_spiral_tower'>Spiral Tower</a><br>&nbsp;<b><a href='#h_optional_dungeons'>Optional Dungeons</a></b> | <a href='#h_aquatic_gardens_of_surferio'>Aquatic Gardens of Surferio</a> | <a href='#h_sphere_211_floors_7100'>Sphere 211 (floors 7-100)</a> | <a href='#h_mosel_ruins_lower_floors'>Mosel Ruins (lower floors)</a><br>&nbsp;<b><a href='#h_postgame'>Post-game</a></b> | <a href='#h_maze_of_tribulations'>Maze of Tribulations</a> | <a href='#h_urssa_cave_temple'>Urssa Cave Temple</a> | <a href='#h_sphere_211_floors_101211'>Sphere 211 (floors 101-211)</a><br><b><big><a href='#h_appendices'>Appendices</a></big></b></div>
+<h2><a href='#h_about_the_guide' data-toggle='collapse'>About the guide</a></h2>
+<div id='h_about_the_guide' class='collapse in'>
+
+    <h3><a href='#h_preface' data-toggle='collapse'>Preface</a></h3>
+    <div id='h_preface' class='collapse in'>
+      <p>Hi, I'm <a href="https://twitter.com/divinebenis">Aurel (paranoodle)</a> and I'm autistic and Star Ocean 3 is one of my special interests. I replay it pretty often, sometimes winging it and sometimes with a guide when I want to get specific endings/etc. And there's some really good guides around on GameFAQs, but almost every time I've needed to have 3+ open at once while I cross-reference things, so I've decided to try to make my own "all-in-one" walkthrough of sorts, taking advantage of scripting to give readers toggles for what parts they do/don't want covered.</p>
+      <p>That said I'll link to the more in-depth FAQs/walkthroughs that cover things this guide doesn't cover, especially for the more complicated topics like Item Creation or how the AI works.</p>
+      </div>
+
+    <h3><a href='#h_guide_progress' data-toggle='collapse'>Guide Progress</a></h3>
+    <div id='h_guide_progress' class='collapse in'>
+      <p>This guide is pretty obviously unfinished so far, but I've decided to start releasing it a little early in order to get feedback on the best way to display/word/cover things. I'm trying to go through it roughly linearly so people just starting the game and who are slow at playing can have more or less the intended experience.</p>
+      <p><b>Currently in this guide:</b></p>
+      <ul><li>General mechanics explanations for <i>some</i> but not all mechanics (see )</li>
+        <li>Rough walkthrough starting at Pesotto Forest and going as far as Kirlsa Caverns</li>
+        <li>All maps for parts the walkthrough covers</li>
+        <li>All private actions for parts the walkthrough covers</li>
+        <li>All item locations for parts the walkthrough covers</li>
+        <li>All battle trophy requirements for parts the walkthrough covers</li>
+        <li>All puzzle solutions for parts the walkthrough covers</li>
+        <li>All encyclopedia unlocks for parts the walkthrough covers</li>
+      </ul>
+      <p><b>Currently not yet in this guide:</b></p>
+      <ul><li>Certain mechanics explanations (such as general combat mechanics, etc)</li>
+        <li>Inventor unlock locations (on account of not having reached Peterny yet) - there might be some pre-reqs I'll set up <i>before</i> reaching Peterny, but if so I'll list it in the change log just in case.</li>
+        <li>Appendices (character stats, item descriptions, enemy profiles, etc)</li>
+        <li>Any pretty CSS for formatting</li>
+      </ul>
+      <p>Any chunks that are currently missing (within sections that are already otherwise written) will be quickly mentioned in red panels like this:</p>
+<div class="panel panel-danger"><div class="panel-heading">[information] is currently missing from [section]</div></div>
+      </div>
+
+    <h3><a href='#h_change_logs' data-toggle='collapse'>Change logs</a></h3>
+    <div id='h_change_logs' class='collapse in'>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#wip_change_log_160620'>Change log: 16.06.20</a></b></h4></div><div id='wip_change_log_160620' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li>added some shit</li>
+      </ul>
+</div></div></div></div>
+      </div>
 
     <h3><a href='#h_on_spoilers' data-toggle='collapse'>On Spoilers</a></h3>
     <div id='h_on_spoilers' class='collapse in'>
       <p>This guide aims to be as spoiler-free as possible, but some concessions have to be made for simplicity's sake. Any and all <i>story</i> spoilers will be avoided, but due to how guides work there will be mechanics-related spoilers such as revealing which characters become party members, when certain abilities unlock, etc.</p>
       <p>That said, things like puzzle solutions will always be under a block so you can reveal them as you'd like, but don't risk seeing on accident if you want to solve them yourself.</p>
+      </div>
+
+    <h3><a href='#h_sourcescredits' data-toggle='collapse'>Sources/credits</a></h3>
+    <div id='h_sourcescredits' class='collapse in'>
+      <p>Way too much of this guide was written from memory and by double-checking things ingame, but specific sources to fill in the gaps include:</p>
+      <ul><li>Several guides on GameFAQs, namely:</li>
+      <ul>
+        <li><a href="https://gamefaqs.gamespot.com/ps2/536705-star-ocean-till-the-end-of-time/faqs/32229">FAQ/Walkthrough by A I e x</a></li>
+        <li><a href="https://gamefaqs.gamespot.com/ps2/536705-star-ocean-till-the-end-of-time/faqs/32155">Kirlsa Caverns Hauler Guide by ElevenFour</a></li>
+        <li><a href="https://gamefaqs.gamespot.com/ps2/536705-star-ocean-till-the-end-of-time/faqs/42719">Dictionary Completion FAQ by DarkElf99</a></li>
+        <li><a href="https://gamefaqs.gamespot.com/ps2/536705-star-ocean-till-the-end-of-time/faqs/37839">Brady Games Strategy Guide Errors FAQ by Viett</a> (to go with below)</li>
+      </ul>
+        <li>Official Brady Games Strategy Guide (I don't know if this is still available anywhere)</li>
+        <li><a href="http://pendell.atspace.cc/so3ic.html">Item Creation Calculator</a></li>
+      </ul>
+      <p>In general, if there's anything you'd like more context/information on, especially specific systems/mechanics, I'd recommend taking a look at the <a href="https://gamefaqs.gamespot.com/ps2/536705-star-ocean-till-the-end-of-time/faqs">GameFAQs guides</a>! There's some on almost every aspect of this game by now and most get very in-depth.</p>
       </div>
     </div>
 
@@ -176,7 +227,11 @@ window.onload = function wc() {
       <p>Do note that when going for map completion, the area that gets filled out where you walk is relatively small, and the map itself tends to extend out a little around its borders, so you'll need to hug the walls quite a bit to reach 99%+.</p>
       <p>Some areas can be completed on your first visit, but some will require more than one, either due to some areas being locked behind story progress directly, or due to requiring a mid-game item that destroys damaged walls. We'll point out which map completions can be obtained when.</p>
       </div>
+    </div>
 
+  <h2><a href='#h_frequently_asked_questions' data-toggle='collapse'>Frequently Asked Questions</a></h2>
+  <div id='h_frequently_asked_questions' class='collapse in'>
+    <p>Well this isnt out yet so who fuckign knows</p>
     </div>
 
   <h1><a href='#h_walkthrough' data-toggle='collapse'>Walkthrough</a></h1>
@@ -205,55 +260,123 @@ window.onload = function wc() {
     </ul>
     </div>
 
-  <h2><a href='#h_disc_1' data-toggle='collapse'>Disc 1</a></h2>
-  <div id='h_disc_1' class='collapse in'>
+  <h2><a href='#h_disc_1_story' data-toggle='collapse'>Disc 1 Story</a></h2>
+  <div id='h_disc_1_story' class='collapse in'>
 
     <h3><a href='#h_grantier_resort_hotel' data-toggle='collapse'>Grantier Resort Hotel</a></h3>
     <div id='h_grantier_resort_hotel' class='collapse in'>
       <p>[map goes here, no completion]</p>
       <div class='pair'><div class='overlay'><img src='./maps/00_grantier.png'><img src='./maps/00_grantier_items.png' class='items'></div><div class='caption'>
-      <div class='pa' char='all'><b>PA 1:</b> Check the trash can in room 105.</div>
-      <p class='items'></p>
-</div></div>
+      <p><b>No map completion</b></p>
+      </div></div>
+
+      <div class='pa' char='girlboy,sophia,cliff,maria,nel,albel,peppita,mirage'><b>PA 1:</b> Make sure not to check the trash can in room 105.</div>
+      <div class='pa' char='roger,adray'><b>PA 1:</b> Check the trash can in room 105 before speaking to Fayt's parents.</div>
+
+      <div class='pa' char='girlboy,sophia,cliff,nel,roger,peppita,mirage'><b>PA 2:</b> Make sure not to speak to Sophia on the beach before speaking to Fayt's parents.</div>
+      <div class='pa' char='maria,albel,adray'><b>PA 2:</b> Speak to Sophia on the beach before speaking to Fayt's parents.</div>
+
+      <div class='pa' char='girlboy,cliff,maria,albel,adray'><b>PA 3-4:</b> Make sure not to talk to the woman wandering around the beach.</div>
+      <div class='pa' char='roger'><b>PA 3-4:</b> Talk to the woman wandering around the beach, and pick the first dialogue option. You'll get a second cutscene when exiting the area.</div>
+      <div class='pa' char=''><b>PA 3-4:</b> Talk to the woman wandering around the beach, and pick the second dialogue option.</div>
+      <div class='pa' char='sophia,nel,peppita,mirage'><b>PA 3-4:</b> Talk to the woman wandering around the beach, and pick the third dialogue option.</div>
+
+      <div class='pa' char='girlboy,sophia,maria,nel,roger,peppita,mirage,adray'><b>PA 5:</b> When talking to Peppita, pick the first dialogue option.</div>
+      <div class='pa' char='cliff,albel'><b>PA 5:</b> When talking to Peppita, pick the second dialogue option.</div>
+
+      <div class='pa' char='girlboy,sophia,cliff,maria,nel,albel,peppita,mirage'><b>PA 6:</b> While in the Rosetti dressing room, don't get too close to the barricaded door on the south side of the room.</div>
+      <div class='pa' char='roger,adray'><b>PA 6:</b> While in the Rosetti dressing room, go examine the barricaded door on the south side of the room.</div>
+
+      <p class='encyclopedia'>Examine far left and near left information terminals before playing the battle simulator for two entries.</p>
+
+      <div class='pa' char='girlboy,cliff,maria,nel,roger,albel,peppita,mirage,adray'><b>PA 7:</b> When accessing the Game Room panel, pick the first dialogue option.</div>
+      <div class='pa' char='sophia'><b>PA 7:</b> When accessing the Game Room panel, pick the second dialogue option.</div>
+
+      <div class='pa' char='girlboy,maria,nel,mirage'><b>PA 8:</b> When in the Battle Simulator, pick at least one of the options other than "Battle Trophies" and "Start Game".</div>
+      <div class='pa' char='sophia,cliff,roger,albel,peppita,adray'><b>PA 8:</b> When in the Battle Simulator, pick "Start Game" before any other option (other than "Battle Trophies" if you want those).</div>
+
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#grantier_enemies_battle_simulator_only'>Enemies (battle simulator only)</a></b></h4></div><div id='grantier_enemies_battle_simulator_only' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#dragonfly'>Dragonfly</a></li>
+        <li><a href='#lonely_bat'>Lonely Bat</a></li>
+        <li><a href='#lunatic_bat'>Lunatic Bat</a></li>
+        <li><a href='#mythril_brute'>Mythril Brute</a></li>
+        <li><a href='#moa'>Moa</a></li>
+        <li><a href='#poisonous_beetle'>Poisonous Beetle</a></li>
+</div></div></div></div>
+
+      <div class='pa' char='sophia'><b>PA 9-11:</b> Lose the first battle.</div>
+      <div class='pa' char='cliff,roger'><b>PA 9-11:</b> Win the first battle, pick the first dialogue option to play again, then pick the second dialogue option to end the tutorial. Note that you cannot lose/flee either of these battles if you want all the affection points. If you don't think you can survive a battle, escaping is better than losing.</div>
+      <div class='pa' char='girlboy,maria,nel,peppita'><b>PA 9-11:</b> Win the first first battle, then pick the second dialogue option to end the tutorial.</div>
+      <div class='pa' char='albel'><b>PA 9-11:</b> Win the first battle, pick the first dialogue option to play again, then pick the first dialogue option <i>again</i> to play one more time. Note that you cannot lose/flee either of these battles if you want all the affection points. Either loss or defeat is better than not selecting to play again.</div>
+      <div class='pa' char='mirage'><b>PA 9-11:</b> Win the first battle, pick the first dialogue option to play again, then pick the second dialogue option to end the tutorial. Note that you cannot lose either of these battles. If you're having trouble with a battle, losing is better than escaping.</div>
+      <div class='pa' char='adray'><b>PA 9-11:</b> Win the first battle, pick the first dialogue option to play again, then pick the first dialogue option <i>again</i> to play one more time. Note that you cannot lose/flee either of these battles if you want all the affection points. If you're having trouble with a battle, losing is better than escaping.</div>
+
+      <div class='pa' char='girlboy,cliff,maria,roger,albel,mirage'><b>PA 12:</b> Don't stop by the Rossetti dressing room while leaving.</div>
+      <div class='pa' char='sophia,nel,peppita,adray'><b>PA 12:</b> Stop by the Rossetti dressing room while leaving and talk to Peppita.</div>
+
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#mb_miniboss_incapacitator_vass'>Mini-Boss: Incapacitator VASS</a></b></h4></div><div id='mb_miniboss_incapacitator_vass' class='panel-collapse collapse'><div class='panel-body'>
+      <b>HP:</b> 150 | <b>MP:</b> 8
+      <p>This mini-boss consists of three battles in a row, of several incapacitators each. You only have Sophia and Fayt for the first one, but Peppita joins for the next two.</p>
+      <p>Overall these fights are easier than the battle simulator, as the enemies don't hit very hard and go down quite fast. Try to group them to hit several at once if you feel overwhelmed.</p>
+</div></div></div></div>
       </div>
 
     <h3><a href='#h_evacuation_facility' data-toggle='collapse'>Evacuation Facility</a></h3>
     <div id='h_evacuation_facility' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/01_evac.png'><img src='./maps/01_evac_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <p><b>No map completion</b></p>
+      </div></div>
+
+      <div class='pa' char=''><b>PA 13:</b> Don't talk to Peppita by the staircase.</div>
+      <div class='pa' char='girlboy,cliff,sophia,maria,nel,roger,albel,peppita,mirage,adray'><b>PA 13:</b> Go to the east side staircase and talk to Peppita, then pick the first dialogue option.</div>
+      <div class='pa' char='*'><b>PA 13:</b> Go to the east side staircase and talk to Peppita, then pick the first dialogue option.</div>
+      <div class='pa' char=''><b>PA 13:</b> Go to the east side staircase and talk to Peppita, then pick the second dialogue option.</div>
       </div>
 
     <h3><a href='#h_transport_ship_helre' data-toggle='collapse'>Transport Ship Helre</a></h3>
     <div id='h_transport_ship_helre' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/02_helre.png'><img src='./maps/02_helre_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <p><b>No map completion</b></p>
+      </div></div>
+
+      <div class='pa' char=''><b>PA 14:</b> Don't talk to the crewmember on the bridge.</div>
+      <div class='pa' char='maria,nel'><b>PA 14:</b> Talk to the crewmember on the bridge and pick the first dialogue option.</div>
+      <div class='pa' char='roger,mirage,adray'><b>PA 14:</b> Talk to the crewmember on the bridge and pick the second dialogue option.</div>
+      <div class='pa' char='sophia,albel'><b>PA 14:</b> Talk to the crewmember on the bridge and pick the third dialogue option.</div>
+      <div class='pa' char='girlboy,cliff,peppita'><b>PA 14:</b> Talk to the crewmember on the bridge and pick the fourth dialogue option.</div>
+
+      <div class='pa' char='albel'><b>PA 15:</b> skip the pa</div>
+      <div class='pa' char='girlboy,sophia,cliff,maria,nel,roger,peppita,mirage,adray'><b>PA 15:</b> dont skip the pa</div>
+
+      <div class='pa' char='sophia,cliff,maria,nel,peppita'><b>PA 16:</b> During the cutscene, pick the first dialogue option.</div>
+      <div class='pa' char='girlboy,roger,albel,mirage,adray'><b>PA 16:</b> During the cutscene, pick the second dialogue option.</div>
       </div>
 
     <h3><a href='#h_pesotto_forest' data-toggle='collapse'>Pesotto Forest</a></h3>
     <div id='h_pesotto_forest' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/03_pesotto.png'><img src='./maps/03_pesotto_items.png' class='items'></div><div class='caption'>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#pesotto_enemies'>Enemies</a></b></h4></div><div id='pesotto_enemies' class='panel-collapse collapse'><div class='panel-body'>
-      <ul><li><a href='#young_slime'>Young Slime</a> - fairly trivial enemy, slow attacks</li>
-        <li><a href='#nobleman'>Nobleman</a> - fairly trivial as well, they can't actually damage you</li>
+        <li><a href='#young_slime'>Young Slime</a></li>
+        <li><a href='#nobleman'>Nobleman</a></li>
       </ul>
 </div></div></div></div>
       <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (you can only cover around 98% on your very first outing, but the last 1% is feasible as soon as you unlock the next non-town area)</p>
       <p>This is the first map with map completion, and you'll be able to complete it pretty fast outside one small area in the northwest corner of the northern half of the map, which is currently blocked off by NPCs. Remember to hug the walls! The Bunny reward from this map sells for 9000 Fol, making it a great way to get some quick money early (and can be used to cheese some content a bit later if you so choose).</p>
       <p>As noted on the map, you can heal yourself next to the save point, but unlike most other recovery points in the game, it's not a circle on the ground like the save point, but requires interacting with the pod. Feel free to use it as often as you need, especially if you're using the monsters in this area to get a feel for the combat system.</p>
       <p>Once you're ready to proceed through this area, head north to Whipple Village.</p>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_whipple_village' data-toggle='collapse'>Whipple Village</a></h3>
     <div id='h_whipple_village' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/04_whipple.png'><img src='./maps/04_whipple_items.png' class='items'></div><div class='caption'>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_general_store_manybloom'>General Store "Manybloom"</a></b></h4></div><div id='shop_general_store_manybloom' class='panel-collapse collapse'><div class='panel-body'>
-      <ul><li>Blueberries (45 Fol)</li>
-        <li>Blackberries (35 Fol)</li>
-        <li>Ring Mail (180 Fol)</li>
-        <li>Clone Generator (350 Fol)</li>
-        <li>Fresh Sage (310 Fol)</li>
-        <li>Pomello Juice (32718 Fol)</li>
+      <ul><li><a href='#blueberries'>Blueberries</a> (45 Fol)</li>
+        <li><a href='#blackberries'>Blackberries</a> (35 Fol)</li>
+        <li><a href='#ring_mail'>Ring Mail</a> (180 Fol)</li>
+        <li><a href='#clone_generator'>Clone Generator</a> (350 Fol)</li>
+        <li><a href='#fresh_sage'>Fresh Sage</a> (310 Fol)</li>
+        <li><a href='#pomello_juice'>Pomello Juice</a> (25000+ Fol)</li>
       </ul>
 </div></div></div></div>
       <p><b>No map completion</b></p>
@@ -263,7 +386,7 @@ window.onload = function wc() {
         <li>Go back to the house you started in</li>
       </ul>
       <p>You're now free to leave the village. Make sure to pick up any items you'd like, as well as purchase anything interesting. The Pomello Juice is completely irrelevant at this stage in the game, but the Ring Mail is worth taking a look at if you're having trouble avoiding hits.</p>
-</div></div>
+      </div></div>
       <p>Next up:</p>
       <ul><li>Leave the village and go back down to the save point in Pesotto Forest, you'll get a scene when you interact with the pod</li>
         <li>Return to Whipple again, and go back to the house in the bottom-right corner</li>
@@ -277,10 +400,10 @@ window.onload = function wc() {
     <div id='h_ruins_of_coffir' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/05_coffir.png'><img src='./maps/05_coffir_items.png' class='items'></div><div class='caption'>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#coffir_enemies'>Enemies</a></b></h4></div><div id='coffir_enemies' class='panel-collapse collapse'><div class='panel-body'>
-      <ul><li><a href='#nobleman'>Nobleman</a> - same as Pesotto Forest</li>
-        <li><a href='#thieving_scumbag'>Thieving Scumbag</a> - Will try to flee when they hit 50% HP, focus on them first if you don't want to lose experience points</li>
-        <li><a href='#shrieker'>Shrieker</a> - Deals MP damage</li>
-        <li><a href='#young_shrieker'>Young Shrieker</a> - Can poison you</li>
+      <ul><li><a href='#nobleman'>Nobleman</a></li>
+        <li><a href='#thieving_scumbag'>Thieving Scumbag</a></li>
+        <li><a href='#shrieker'>Shrieker</a></li>
+        <li><a href='#young_shrieker'>Young Shrieker</a></li>
       </ul>
 </div></div></div></div>
       <p><b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until much later in the game)</p>
@@ -288,11 +411,14 @@ window.onload = function wc() {
       <p>(As such, the items found there aren't listed at the moment, they'll be included next time we visit the ruins)</p>
       <p>Explore to your heart's content, after which your goal is Norton's Hideout, in the northmost part of the map. Go around the back of the building, via the right side, to find the entrance (and a cutscene, and a mini-boss battle).</p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#mb_miniboss_buster_makafy_and_tepeki'>Mini-Boss: Buster, Makafy, and Tepeki</a></b></h4></div><div id='mb_miniboss_buster_makafy_and_tepeki' class='panel-collapse collapse'><div class='panel-body'>
+      <p><b>HP:</b> 250 | <b>MP:</b> 11</p>
+      <p><b>HP:</b> 300 | <b>MP:</b> 13</p>
+      <p><b>HP:</b> 200 | <b>MP:</b> 9</p>
       <p>No notable weaknesses on either three, they're basically just named and slightly buffed versions of the <a href='#thieving_scumbag'>Thieving Scumbag</a> enemies.</p>
       <p class='trophies'>No battle trophies for this fight.</p>
 </div></div></div></div>
       <p>Defeating this miniboss nets you the <a href='#beatup_textbook'>Beat-Up Textbook</a>, a unique item that unlocks your first <a href='#antiattack_aura'>Anti-Attack Aura</a>. From now on, whenever you're at 100% Fury and a light attack hits you, you won't take damage and your aura will activate instead. This one specifically stuns your attacker for a short time.</p>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_nortons_hideout' data-toggle='collapse'>Norton's Hideout</a></h3>
@@ -301,9 +427,10 @@ window.onload = function wc() {
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#norton_enemies'>Enemies</a></b></h4></div><div id='norton_enemies' class='panel-collapse collapse'><div class='panel-body'>
       <ul><li><a href='#nobleman'>Nobleman</a></li>
         <li><a href='#thieving_scumbag'>Thieving Scumbag</a></li>
-        <li><a href='#skeleton_warrior'>Skeleton Warrior</a> -</li>
+        <li><a href='#skeleton_warrior'>Skeleton Warrior</a></li>
       </ul>
 </div></div></div></div>
+      <p><b>No map completion</b></p>
       <p>Head for the room with the save point, watch the cutscene, and you'll find a terminal in the southwest corner. There's a small puzzle to unlock the door to the last room in the hideout.</p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#norton_puzzle_hint'>Puzzle Hint</a></b></h4></div><div id='norton_puzzle_hint' class='panel-collapse collapse'><div class='panel-body'>
       <p>If you want to do the puzzle yourself but aren't sure where to start, go look for the graffiti on the walls of the ruins. One of them is fairly close to the entrance and visible when facing north (default camera position, you can reset with the start button). There's two more.</p>
@@ -311,10 +438,11 @@ window.onload = function wc() {
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#norton_puzzle_solution'>Puzzle Solution</a></b></h4></div><div id='norton_puzzle_solution' class='panel-collapse collapse'><div class='panel-body'>
       <p>If you just want the solution: the password is "256".</p>
 </div></div></div></div>
-</div></div>
+      </div></div>
       <p>Regardless of how you solved the puzzle, save your game, then enter the southeast room in the hideout. You'll see a cutscene and start your first boss battle.</p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#b_boss_norton'>Boss: Norton</a></b></h4></div><div id='b_boss_norton' class='panel-collapse collapse'><div class='panel-body'>
-      <p>Don't try to MP-kill him, he's resistant to fire (the only source of MP damage you can have at this point) and has over 35000 MP, as opposed to his 1600 HP. Focus on avoiding his gunfire and get hits in when you can, and he'll drop soon enough.</p>
+      <p><b>HP:</b> 1600 | <b>MP:</b> 35000 | <b>Resists</b> Fire</p>
+      <p>Don't try to MP-kill him, he's resistant to fire (the only source of MP damage you can have at this point) and has ridiculously high MP, as opposed to his low HP. Focus on avoiding his gunfire and get hits in when you can, and he'll drop soon enough.</p>
       <p class='trophies'><b>Defeat Norton within 30 seconds:</b> Spam Blade of Fury (get a cancel bonus going if you can), or spam Cliff's light attack. Either should finish the fight within the time limit, and Norton's dying speech doesn't count.</p>
       <p class='trophies'><b>Defeat Norton without taking damage:</b> This <i>only</i> applies to the character you're currently controlling, so just run to the bottom of the screen and let Cliff handle the fight for you. Use items on him if you need to, just try to stay out of Norton's way.</p>
 </div></div></div></div>
@@ -329,6 +457,8 @@ window.onload = function wc() {
       <p>Once that's done, head back to the southern half of Pesotto Forest, specifically the spot just to the southwest of the save point. Make sure to save either here or in the village if you don't want to risk rewatching some of the previous cutscenes.</p>
       <p>Time for some cutscenes, including a weirdly-paced flashback, after which you'll be in a ship with Cliff and Mirage. Speak with Cliff once and with Mirage three times, after which you can leave and enjoy some more cutscenes.</p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#mb_miniboss_inquisitor'>Mini-boss: Inquisitor</a></b></h4></div><div id='mb_miniboss_inquisitor' class='panel-collapse collapse'><div class='panel-body'>
+      <p>Inquisitor - <b>HP:</b> 1300 | <b>MP:</b> 40</p>
+      <p>Soldiers - <b>HP:</b> 400 | <b>MP:</b> 18</p>
       <p>Now that you have a full three-person party, this fight is pretty easy. Kill the soldiers first, then focus on the inquisitor. Nel can heal you if you ever need it.</p>
 </div></div></div></div>
       </div>
@@ -348,10 +478,11 @@ window.onload = function wc() {
       <p><b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until later in the game)</p>
       <p>Now that you're out of there, welcome to the second dungeon of the game! You start off next to the save point, and the blue/white circle next to it will heal you if you stand on it. So as with Pesotto Forest, if you want to get a better feel for combat, practice using Cliff or Nel, or grind a little bit, this is a good spot for it.</p>
       <p>As with the Coffir ruins, the areas marked in red are destroyable, but we don't have anything with which to destroy them yet. The lighter parts of them (on the map) though are <i>arches</i>, meaning we can walk under them, though it's not necessarily obvious to see depending on your camera angle.</p>
-</div></div>
+      </div></div>
       <p>Make your way across the map towards the first white patch, which is a slippery ice slope. Both this and the next white patch will make you slip downwards when you walk on them, and hitting the wall too fast will make Fayt fall over and you'll reappear at the top of the slope. Just either hold right while slipping, or hold up and step off before you hit the wall, and you'll be fine. If you need to walk back up, hold circle as you walk and you won't slip.</p>
       <p>Save your game, and get ready for the boss of this dungeon.</p>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#b_boss_giant_crab'>Boss: Giant Crab</a></b></h4></div><div id='b_boss_giant_crab' class='panel-collapse collapse'><div class='panel-body'>
+      <p><b>HP:</b> 3500 | <b>MP:</b> 80 | <b>Immune to</b> Water, <b>Weak to</b> Fire</p>
       <p>Immune to water damage, but weak to fire. It also has only 80MP so if you have Blazing Sword on Fayt, this fight is a cakewalk. It's rather slow, so focus on avoiding its strong attacks, whereas for its weak attacks you can either try to avoid them, or keep your fury high so it hits you at 100% and gets stunned.</p>
       <p class='trophies'><b>Defeat Giant Crab within 1 minute:</b> Should be really easy if Fayt has Blazing Sword. If not, try to use Aerial instead and set Cliff to manual so he gets stuns in on his own while you pummel the boss.</p>
       <p class='trophies'><b>Defeat Giant Crab without taking damage:</b> Same as with Norton, just stay out of the way and let the CPU handle the rest. If you want it to go a little faster, you can try to join in if you're confidant you can dodge its attacks.</p>
@@ -364,186 +495,360 @@ window.onload = function wc() {
       <div class='pair'><div class='overlay'><img src='./maps/08_airyglyph.png'><img src='./maps/08_airyglyph_items.png' class='items'></div><div class='caption'>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_grocer_dragon_treasure'>Grocer "Dragon Treasure"</a></b></h4></div><div id='shop_grocer_dragon_treasure' class='panel-collapse collapse'><div class='panel-body'>
       <p>(bottom-center shop)</p>
-      <ul><li>Blueberries (45 Fol)</li>
-        <li>Aquaberries (15 Fol)</li>
-        <li>Blackberries (35 Fol)</li>
-        <li>Gooseberry Juice (3100 Fol)</li>
-        <li>Steamed Bun (200 Fol)</li>
+      <ul><li><a href='#blueberries'>Blueberries</a> (45 Fol)</li>
+        <li><a href='#aquaberries'>Aquaberries</a> (15 Fol)</li>
+        <li><a href='#blackberries'>Blackberries</a> (35 Fol)</li>
+        <li><a href='#gooseberry_juice'>Gooseberry Juice</a> (3100 Fol)</li>
+        <li><a href='#steamed_bun'>Steamed Bun</a> (200 Fol)</li>
       </ul>
 </div></div></div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_highquality_armorer_tiamat'>High-Quality Armorer "Tiamat"</a></b></h4></div><div id='shop_highquality_armorer_tiamat' class='panel-collapse collapse'><div class='panel-body'>
       <p>(top-most shop)</p>
-      <ul><li>Holy Sword (19600 Fol)</li>
-        <li>Osprey Dagger (15100 Fol)</li>
-        <li>Broad Axe (15800 Fol)</li>
-        <li>Nodachi (24000 Fol)</li>
-        <li>Damask Gauntlet (44000 Fol)</li>
+      <ul><li><a href='#holy_sword'>Holy Sword</a> (19600 Fol)</li>
+        <li><a href='#osprey_dagger'>Osprey Dagger</a> (15100 Fol)</li>
+        <li><a href='#broad_axe'>Broad Axe</a> (15800 Fol)</li>
+        <li><a href='#nodachi'>Nodachi</a> (24000 Fol)</li>
+        <li><a href='#damask_gauntlet'>Damask Gauntlet</a> (44000 Fol)</li>
       </ul>
 </div></div></div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_armorer_lefthanded_lizard'>Armorer "Left-Handed Lizard"</a></b></h4></div><div id='shop_armorer_lefthanded_lizard' class='panel-collapse collapse'><div class='panel-body'>
       <p>(bottom-left shop)</p>
-      <ul><li>Masterwork Plate (24000 Fol)</li>
-        <li>Superior Chain Mail (26800 Fol)</li>
+      <ul><li><a href='#masterwork_plate'>Masterwork Plate</a> (24000 Fol)</li>
+        <li><a href='#superior_chain_mail'>Superior Chain Mail</a> (26800 Fol)</li>
       </ul>
 </div></div></div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_outfitter_dragons_dungeon'>Outfitter "Dragon's Dungeon"</a></b></h4></div><div id='shop_outfitter_dragons_dungeon' class='panel-collapse collapse'><div class='panel-body'>
       <p>(bottom-right shop)</p>
-      <ul><li>Compounding Elixirs (120 Fol)</li>
-        <li>Cooking Ingredients (120 Fol)</li>
-        <li>Silver Ring (1750 Fol)</li>
-        <li>Clone Generator (350 Fol)</li>
-        <li>Basil (20 Fol)</li>
-        <li>Sage (20 Fol)</li>
-        <li>Lavender (20 Fol)</li>
-        <li>Fresh Sage (310 Fol)</li>
+      <ul><li><a href='#compounding_elixirs'>Compounding Elixirs</a> (120 Fol)</li>
+        <li><a href='#cooking_ingredients'>Cooking Ingredients</a> (120 Fol)</li>
+        <li><a href='#silver_ring'>Silver Ring</a> (1750 Fol)</li>
+        <li><a href='#clone_generator'>Clone Generator</a> (350 Fol)</li>
+        <li><a href='#basil'>Basil</a> (20 Fol)</li>
+        <li><a href='#sage'>Sage</a> (20 Fol)</li>
+        <li><a href='#lavender'>Lavender</a> (20 Fol)</li>
+        <li><a href='#fresh_sage'>Fresh Sage</a> (310 Fol)</li>
       </ul>
 </div></div></div></div>
+      <p><b>Inn "Wyvern's Tail"</b> - 150 Fol/night</p>
+      <p><b>No map completion</b></p>
       <p>You'll notice the equipment prices are prohibitedly expensive. This is an area we'll spend more time in later in the game, for now we're just passing through. <i>That said</i>, you can take advantage of this and get some midgame weapons early if you're interested in lowering the overall game difficulty, by selling bunnies from map completion rewards. You'll need two of them, and at this point you only have at most one, but you can get a second in the next area.</p>
       <p>There isn't a lot to do in the city just yet other than any basic shopping you need, as well as talking to NPCs. The castle is locked off for now, as the guards won't let you in. Grab any treasure if you'd like, save at the inn, and head out the East exit when you're ready.</p>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_traum_mountains' data-toggle='collapse'>Traum Mountains</a></h3>
     <div id='h_traum_mountains' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/09_traum.png'><img src='./maps/09_traum_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#aqueduct_enemies'>Enemies</a></b></h4></div><div id='aqueduct_enemies' class='panel-collapse collapse'><div class='panel-body'>
-      <ul><li>a</li>
+      <ul><li><a href='#bogle_leader'>Bogle Leader</a></li>
+        <li><a href='#bogle_soldier'>Bogle Soldier</a></li>
+        <li><a href='#dragon_brigade_soldier'>Dragon Brigade Soldier</a></li>
+        <li><a href='#killer_wasp'>Killer Wasp</a></li>
+        <li><a href='#ochre_jelly'>Ochre Jelly</a></li>
       </ul>
 </div></div></div></div>
       <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)</p>
       <p>First off is a cutscene that will drop you off a little ways from the Kirlsa entrance. You can technically already complete the map now, but you'll run into another cutscene if you head East and it's almost impossible to hit 99% without triggering it, so the easiest time to grab map completion is after a handful of cutscenes in the next area.</p>
-      <p>Most of the monsters on the Kirlsa side of the mountains are fine to fight, but heading towards Airyglyph will pit you against enemies you're unlikely to win against at this point in time, so it's best to avoid them completely, or at worst run away from combat.</p>
+      <p>Most of the monsters on the Kirlsa side of the mountains are fine to fight, but heading towards Airyglyph will pit you against enemies you're unlikely to win against at this point in time, so it's best to avoid them completely, or at worst run away from combat. The Dragon Brigade Soldiers specifically are likely to cause game overs very fast.</p>
       <p>Anytime you're ready to progress, just head for Kirlsa.</p>
       </div>
 
     <h3><a href='#h_mining_town_of_kirlsa' data-toggle='collapse'>Mining Town of Kirlsa</a></h3>
     <div id='h_mining_town_of_kirlsa' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/10_kirlsa.png'><img src='./maps/10_kirlsa_items.png' class='items'></div><div class='caption'>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_grocer_iron_curtain'>Grocer "Iron Curtain"</a></b></h4></div><div id='shop_grocer_iron_curtain' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(left-most shop)</p>
+      <ul><li><a href='#blueberries'>Blueberries</a> (45 Fol)</li>
+        <li><a href='#aquaberries'>Aquaberries</a> (15 Fol)</li>
+        <li><a href='#blackberries'>Blackberries</a> (35 Fol)</li>
+        <li><a href='#gooseberry_juice'>Gooseberry Juice</a> (3100 Fol)</li>
+        <li><a href='#steamed_bun'>Steamed Bun</a> (200 Fol)</li>
+      </ul>
+</div></div></div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_outfitter_iron_rage'>Outfitter "Iron Rage"</a></b></h4></div><div id='shop_outfitter_iron_rage' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#silver_ring'>Silver Ring</a> (1750 Fol)</li>
+        <li><a href='#clone_generator'>Clone Generator</a> (350 Fol)</li>
+        <li><a href='#fresh_sage'>Fresh Sage</a> (310 Fol)</li>
+        <li><a href='#basil'>Basil</a> (20 Fol)</li>
+        <li><a href='#sage'>Sage</a> (20 Fol)</li>
+        <li><a href='#lavender'>Lavender</a> (20 Fol)</li>
+      </ul>
+</div></div></div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_armorer_master_slayer'>Armorer "Master Slayer"</a></b></h4></div><div id='shop_armorer_master_slayer' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#longsword'>Longsword</a> (50 Fol)</li>
+        <li><a href='#falchion'>Falchion</a> (45 Fol)</li>
+        <li><a href='#gauntlet'>Gauntlet</a> (55 Fol)</li>
+        <li><a href='#ring_mail'>Ring Mail</a> (180 Fol)</li>
+        <li><a href='#scale_armor'>Scale Armor</a> (200 Fol)</li>
+</div></div></div></div>
+      <p><b>Inn "Iron Maiden"</b> - 100 Fol/night</p>
+      <p><b>No map completion</b></p>
       <p>Once you're done with cutscenes, you're locked into this map until you progress a little more into the story. The northeast section of town is locked off until another several hours from now, the guards won't let you pass the gates. A guard also blocks off the northern path out of town, but he's only there until we finish our business here.</p>
       <p>Do any shopping you'd like, talk to NPCs, and once you're ready to progress, go down the stairs in the southwest corner of the town and talk to the Sermonic Old Man, then go up to the cemetery (north of the inn, up the stairs) and watch a cutscene there.</p>
-      <p>Once you're done with that, starting the next morning you'll be allowed to leave town via the north exit.</p>
+      <p class='encyclopedia'>Speak to Astor in the house across from the inn for his entry.</p>
+      <p>Once you're done with that, starting the next morning you'll be allowed to leave town. Do so via the north exit.</p>
+
+      <div class='pa' char='girlboy'><b>PA 17:</b> Starting now (and until entering the "Granah Hills" region), if you decide to return to Airyglyph for whatever reason, make sure not to talk to Cliff next to the Aqueducts entrance.</div>
+      <div class='pa' char='sophia'><b>PA 17:</b> Go all the way back to Airyglyph, talk to Cliff next to the Aqueducts entrance, and pick the first dialogue option.</div>
+      <div class='pa' char=''><b>PA 17:</b> Go all the way back to Airyglyph, talk to Cliff next to the Aqueducts entrance, and pick the second dialogue option.</div>
+
       <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#holysword_easy_mode'>Easy mode</a></b></h4></div><div id='holysword_easy_mode' class='panel-collapse collapse'><div class='panel-body'>
       <p><i>That said</i>, as mentioned in the previous section, if you're interested in getting some overpowered weapons, now is the best time to do it. Kirlsa's west exit has also opened back up, meaning you're free to backtrack to Airyglyph if you'd like, and you can sell the map completion rewards from Pesotto Forest and Traum Mountains for a cool 18000 Fol total. This is just under the amount you need to buy the <a href='#holy_sword'>Holy Sword</a>, which is by far the best weapon you can get for Fayt at this stage in the game.</p>
-      <p>If you don't play Fayt you might be tempted by one of the other weapons, but the <a href='#damask_gauntlet'>Damask Gauntlet</a> is absurdly overpriced (and not to be confused with <a href='#damask_gauntlets'>Damask Gauntlets</a>, another one of Cliff's weapons) and the <a href='#osprey_dagger'>Osprey Dagger</a> will make a less significant upgrade to Nel than the Holy Sword would to Fayt.</p>
+      <p>If you don't play Fayt you might be tempted by one of the other weapons, but the <a href='#damask_gauntlet'>Damask Gauntlet</a> is absurdly overpriced (and not to be confused with <a href='#damask_gauntlets'>Damask Gauntlets</a>, <i>another</i> one of Cliff's weapons) and the <a href='#osprey_dagger'>Osprey Dagger</a> will make a less significant upgrade for Nel than the Holy Sword would for Fayt.</p>
 </div></div></div></div>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_kirlsa_caverns' data-toggle='collapse'>Kirlsa Caverns</a></h3>
     <div id='h_kirlsa_caverns' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/11_kirlsa_cavern.png'><img src='./maps/11_kirlsa_cavern_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#kirlsa1_enemies'>Enemies</a></b></h4></div><div id='kirlsa1_enemies' class='panel-collapse collapse'><div class='panel-body'>
+        <li><a href='#giant_bat'>Giant Bat</a></li>
+        <li><a href='#huge_spider'>Huge Spider</a></li>
+        <li><a href='#skeleton_knight'>Skeleton Knight</a></li>
+        <li><a href='#tarantula'>Tarantula</a></li>
+      </ul>
+</div></div></div></div>
+      <p><b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until later in the game)</p>
+      <p>Welcome to the Kirlsa cavern! This is the first dungeon in the game that's big enough to require two different maps, but the second involves a... minigame/puzzle, of sorts.</p>
+      <p>As with a number of the maps so far, several areas on this first map are currently blocked off on account of us not having anything to destroy rocks with.</p>
+      <p>The path through this first map is fairly straightforward, just head to the save point via the east route, heal, and save in preparation for the boss.</p>
+      </div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#b_boss_earth_smasher'>Boss: Earth Smasher</a></b></h4></div><div id='b_boss_earth_smasher' class='panel-collapse collapse'><div class='panel-body'>
+      <p><b>HP:</b> 3600 | <b>MP:</b> 163 | <b>Absorbs</b> Earth</p>
+      <p>Absorbs earth magic, but has no other elemental strengths/weaknesses. Has high HP but relatively low MP, so you might want to consider trying for an MP kill.</p>
+      <p>This fight has boulder hazards like other fights in this dungeon, so keep an eye out for those. If you hear "Earth Glaive", try to run behind the boss. Unfortunately the rest of your party might not follow, so keep on top of healing as necessary.</p>
+      <p>If you're having too much trouble, take advantage of the healing pad and save point in the previous room to grind as necessary.</p>
+      <p class='trophies'><b>This boss has no associated battle trophies.</b></p>
+</div></div></div></div>
+      <p>Once the fight is over, go north and pull the lever there. The door you came through locked behind you, so you have to go back around to continue. I recommend saving before you start on the next half of the dungeon, which is located in the room labeled <b>Hauler Console</b>.</p>
+
       <div class='pair'><div class='overlay'><img src='./maps/12_hauler_puzzle.png'><img src='./maps/12_hauler_puzzle_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#kirlsa2_enemies'>Enemies</a></b></h4></div><div id='kirlsa2_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <p>These aren't present while riding the hauler, but will appear at specific stop points if you decide to stop and explore.</p>
+      <ul><li><a href='#cave_spider'>Cave Spider</a></li>
+        <li><a href='#dire_tarantula'>Dire Tarantula</a></li>
+        <li><a href='#hornet'>Hornet</a></li>
+        <li><a href='#water_reaper'>Water Reaper</a></li>
+      </ul>
+</div></div></div></div>
+      <p>Thankfully, there's <b>no map completion</b> for this puzzle! It's already complicated enough without that.</p>
+      <p>Interact with the console, read the in-game guide if you'd like, and get ready for a potentially pretty long puzzle.</p>
+      <p>The puzzle is divided into three sections below:</p>
+      <ul><li>A general guide for having a bit more context than just the in-game guide, if you'd like to figure this out yourself, or if you just want to understand this puzzle a little better before you jump in</li>
+        <li>An "all items" (that we can access right now) guide, for picking everything up but without dealing with the puzzle</li>
+        <li>A "just get me out" guide, for exiting the caverns as fast as possible with the least amount of hassle</li>
+      </ul>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#hauler_general_hauler_guide'>General Hauler Guide</a></b></h4></div><div id='hauler_general_hauler_guide' class='panel-collapse collapse'><div class='panel-body'>
+</div></div></div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#hauler_puzzle_solution__all_items'>Puzzle Solution - all items</a></b></h4></div><div id='hauler_puzzle_solution__all_items' class='panel-collapse collapse'><div class='panel-body'>
+</div></div></div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#hauler_puzzle_solution__just_get_me_out'>Puzzle Solution - just get me out</a></b></h4></div><div id='hauler_puzzle_solution__just_get_me_out' class='panel-collapse collapse'><div class='panel-body'>
+      <p>Remember to stay under 25 km/h before any turns!</p>
+      <p>Pick the <b>Steady</b> Hauler, then take the following route:</p>
+      <ul><li>Left</li>
+        <li>Right</li>
+        <li>Left (keep slowing down to avoid falling rocks)</li>
+        <li>Left (beware of falling rocks again, then accelerate to 25km/h through gates)</li>
+        <li>Left</li>
+      </ul>
+      <p>This might take you a couple tries, hauler beasts are finicky.</p>
+</div></div></div></div>
+      <p>Once you're out, you can talk to the NPC at the exit if you ever want to return to the beginning of the puzzle and redo it. As soon as you've reached the end at least once, you'll have the "automatic" option at the console so you don't have to do the puzzle again unless you want to.</p>
+      </div></div>
       </div>
 
     <h3><a href='#h_bequerel_mountain_path' data-toggle='collapse'>Bequerel Mountain Path</a></h3>
     <div id='h_bequerel_mountain_path' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/13_bequerel.png'><img src='./maps/13_bequerel_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#bequerel_enemies'>Enemies</a></b></h4></div><div id='bequerel_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#dire_wolf'>Dire Wolf</a></li>
+        <li><a href='#l24_thieving_scumbag'>L24 Thieving Scumbag</a></li>
+        <li><a href='#stag_beetle'>Stag Beetle</a></li>
+        <li><a href='#super_nobleman'>Super Nobleman</a></li>
+      </ul>
+</div></div></div></div>
+      <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)</p>
+      <p>This area is pretty straightforward. Save your game to celebrate finishing the hauler puzzle, pick up any items you'd like, and head to Arias.</p>
+      <p>You can technically already head up to the Mountains of Barr, but since that's a later-game area you're likely to get shredded to pieces fairly fast.</p>
+      </div></div>
       </div>
 
     <h3><a href='#h_riverfront_village_of_arias' data-toggle='collapse'>Riverfront Village of Arias</a></h3>
     <div id='h_riverfront_village_of_arias' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/14_arias.png'><img src='./maps/14_arias_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_general_store_jack_potato'>General Store "Jack Potato"</a></b></h4></div><div id='shop_general_store_jack_potato' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(top-most shop)</p>
+      <ul><li><a href='#silver_ring'>Silver Ring</a> (1750 Fol)</li>
+        <li><a href='#blueberries'>Blueberries</a> (45 Fol)</li>
+        <li><a href='#aquaberries'>Aquaberries</a> (15 Fol)</li>
+        <li><a href='#blackberries'>Blackberries</a> (35 Fol)</li>
+        <li><a href='#gooseberry_juice'>Gooseberry Juice</a> (3100 Fol)</li>
+        <li><a href='#broadsword'>Broadsword</a> (120 Fol)</li>
+        <li><a href='#long_dagger'>Long Dagger</a> (110 Fol)</li>
+        <li><a href='#steel_gauntlet'>Steel Gauntlet</a> (120 Fol)</li>
+        <li><a href='#steel_chain_mail'>Steel Chain Mail</a> (700 Fol)</li>
+        <li><a href='#clone_generator'>Clone Generator</a> (350 Fol)</li>
+        <li><a href='#fresh_sage'>Fresh Sage</a> (310 Fol)</li>
+      </ul>
+</div></div></div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#shop_bakery_moonlight_gauntlet'>Bakery "Moonlight Gauntlet"</a></b></h4></div><div id='shop_bakery_moonlight_gauntlet' class='panel-collapse collapse'><div class='panel-body'>
+      <p>(bottom-most shop)</p>
+      <ul><li><a href='#apple_pie'>Apple Pie</a> (400 Fol)</li>
+        <li><a href='#steamed_bun'>Steamed Bun</a> (200 Fol)</li>
+        <li><a href='#cooking_ingredients'>Cooking Ingredients</a> (120 Fol)</li>
+        <li><a href='#pomello_juice'>Pomello Juice</a> (25000+ Fol)</li>
+      </ul>
+</div></div></div></div>
+      <p><b>Inn "The Dozing"</b> - 250 Fol/night</p>
+      <p><b>No map completion</b></p>
+      </div></div>
+      <p class='encyclopedia'>Examine the painting near the front desk of the inn, then read the entry for "Nevelle Zelpher" to get a second entry.</p>
+      <p class='encyclopedia'>Examine the note on the table the first time you visit the Lord's Mansion.</p>
       </div>
 
     <h3><a href='#h_aire_hillskirlsa_hills' data-toggle='collapse'>Aire Hills/Kirlsa Hills</a></h3>
     <div id='h_aire_hillskirlsa_hills' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/15_hills.png'><img src='./maps/15_hills_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#hills_enemies'>Enemies</a></b></h4></div><div id='hills_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#bogle_soldier'>Bogle Soldier</a></li>
+        <li><a href='#dire_wolf'>Dire Wolf</a></li>
+        <li><a href='#l24_thieving_scumbag'>L24 Thieving Scumbag</a></li>
+        <li><a href='#storm_brigade'>Storm Brigade</a></li>
+        <li><a href='#super_nobleman'>Super Nobleman</a></li>
+      </ul>
+</div></div></div></div>
+      <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)</p>
+      <p>(This area changes name depending on which part of it you're standing in - the half on the Arias side is called "Aire Hills" and the half on the Kirlsa side is "Kirlsa Hills")</p>
+      </div></div>
       </div>
 
     <h3><a href='#h_granah_hills' data-toggle='collapse'>Granah Hills</a></h3>
     <div id='h_granah_hills' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/16_granah.png'><img src='./maps/16_granah_items.png' class='items'></div><div class='caption'>
-</div></div>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#granah_enemies'>Enemies</a></b></h4></div><div id='granah_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#black_brigade_soldier'>Black Brigade Soldier</a></li>
+        <li><a href='#elder_shrieker'>Elder Shrieker</a></li>
+        <li><a href='#poisonous_wasp'>Poisonous Wasp</a></li>
+        <li><a href='#young_shrieker'>Young Shrieker</a></li>
+      </ul>
+</div></div></div></div>
+      <p><b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)</p>
+      </div></div>
       </div>
 
     <h3><a href='#h_kirlsa_training_facility' data-toggle='collapse'>Kirlsa Training Facility</a></h3>
     <div id='h_kirlsa_training_facility' class='collapse in'>
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#ktf_enemies'>Enemies</a></b></h4></div><div id='ktf_enemies' class='panel-collapse collapse'><div class='panel-body'>
+      <ul><li><a href='#animated_armor'>Animated Armor</a></li>
+        <li><a href='#black_brigade_soldier'>Black Brigade Soldier</a></li>
+        <li><a href='#bogle_leader'>Bogle Leader</a></li>
+        <li><a href='#horned_wolf'>Horned Wolf</a></li>
+        <li><a href='#hyper_nobleman'>Hyper Nobleman</a></li>
+        <li><a href='#lizard_man'>Lizard Man</a></li>
+        <li><a href='#skeleton_leader'>Skeleton Leader</a></li>
+        <li><a href='#soldier'>Soldier</a></li>
+        <li><a href='#toad_fighter'>Toad Fighter</a></li>
+      </ul>
+</div></div></div></div>
+      <p><b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until later in the game)</p>
       <div class='pair'><div class='overlay'><img src='./maps/17_kirlsa_tf_floor1.png'><img src='./maps/17_kirlsa_tf_floor1_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/18_kirlsa_tf_floor2.png'><img src='./maps/18_kirlsa_tf_floor2_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/19_kirlsa_tf_floor3.png'><img src='./maps/19_kirlsa_tf_floor3_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/20_kirlsa_tf_floor4.png'><img src='./maps/20_kirlsa_tf_floor4_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
+
+      <div class='panel-group'><div class='panel panel-default'><div class='panel-heading'><h4 class='panel-title'><b><a data-toggle='collapse' href='#b_boss_shelby'>Boss: Shelby</a></b></h4></div><div id='b_boss_shelby' class='panel-collapse collapse'><div class='panel-body'>
+      <p>Shelby - <b>HP:</b> 5100 | <b>MP:</b> 13816 | <b>Absorbs</b> Wind</p>
+      <p>Black Brigade Soldier (x2) - <b>HP:</b> 1150 | <b>MP:</b> 68</p>
+
+      <p class='trophies'><b>Defeat Shelby within 1 minute:</b></p>
+      <p class='trophies'><b>Defeat Shelby without taking damage:</b></p>
+</div></div></div></div>
+
       </div>
+
+<div class="panel panel-danger"><div class="panel-heading">This is where the guide ends for now! Will try to add more in a reasonably timely manner but this game has a lot in it.</div></div>
 
     <h3><a href='#h_palmira_plains' data-toggle='collapse'>Palmira Plains</a></h3>
     <div id='h_palmira_plains' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/21_palmira.png'><img src='./maps/21_palmira_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_trading_town_of_peterny' data-toggle='collapse'>Trading Town of Peterny</a></h3>
     <div id='h_trading_town_of_peterny' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/22_peterny.png'><img src='./maps/22_peterny_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
+
       </div>
 
     <h3><a href='#h_sanmite_steppe' data-toggle='collapse'>Sanmite Steppe</a></h3>
     <div id='h_sanmite_steppe' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/23_sanmite.png'><img src='./maps/23_sanmite_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_duggus_forest' data-toggle='collapse'>Duggus Forest</a></h3>
     <div id='h_duggus_forest' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/24_duggus_start.png'><img src='./maps/24_duggus_start_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/25_duggus_mid.png'><img src='./maps/25_duggus_mid_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/26_duggus_end.png'><img src='./maps/26_duggus_end_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
+
       </div>
 
     <h3><a href='#h_lost_city_of_surferio' data-toggle='collapse'>Lost City of Surferio</a></h3>
     <div id='h_lost_city_of_surferio' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/27_surferio.png'><img src='./maps/27_surferio_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
+
       </div>
 
     <h3><a href='#h_irisa_fields' data-toggle='collapse'>Irisa Fields</a></h3>
     <div id='h_irisa_fields' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/28_irisa.png'><img src='./maps/28_irisa_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_surferio_annex' data-toggle='collapse'>Surferio Annex</a></h3>
     <div id='h_surferio_annex' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/29_annex.png'><img src='./maps/29_annex_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_sacred_city_of_aquios' data-toggle='collapse'>Sacred City of Aquios</a></h3>
     <div id='h_sacred_city_of_aquios' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/30_aquios.png'><img src='./maps/30_aquios_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
+
       </div>
 
     <h3><a href='#h_castle_aquaria' data-toggle='collapse'>Castle Aquaria</a></h3>
     <div id='h_castle_aquaria' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/31_aquaria_1f.png'><img src='./maps/31_aquaria_1f_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/32_aquaria_2f.png'><img src='./maps/32_aquaria_2f_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
+
       </div>
 
     <h3><a href='#h_bequerel_mine' data-toggle='collapse'>Bequerel Mine</a></h3>
     <div id='h_bequerel_mine' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/33_bequerel_part1.png'><img src='./maps/33_bequerel_part1_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/34_bequerel_part2.png'><img src='./maps/34_bequerel_part2_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/35_bequerel_part3.png'><img src='./maps/35_bequerel_part3_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/36_bequerel_refinery.png'><img src='./maps/36_bequerel_refinery_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_war' data-toggle='collapse'>War</a></h3>
@@ -553,78 +858,157 @@ window.onload = function wc() {
     <h3><a href='#h_sealed_cavern' data-toggle='collapse'>Sealed Cavern</a></h3>
     <div id='h_sealed_cavern' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/37_cavern.png'><img src='./maps/37_cavern_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_shrine_of_kaddan' data-toggle='collapse'>Shrine of Kaddan</a></h3>
     <div id='h_shrine_of_kaddan' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/38_kaddan_south.png'><img src='./maps/38_kaddan_south_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/39_kaddan_mid.png'><img src='./maps/39_kaddan_mid_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/40_kaddan_north.png'><img src='./maps/40_kaddan_north_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/41_kaddan_end.png'><img src='./maps/41_kaddan_end_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_passage_from_parch_to_plenty' data-toggle='collapse'>Passage from Parch to Plenty</a></h3>
     <div id='h_passage_from_parch_to_plenty' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/42_passage.png'><img src='./maps/42_passage_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_mosel_dunes' data-toggle='collapse'>Mosel Dunes</a></h3>
     <div id='h_mosel_dunes' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/43_mosel_dunes.png'><img src='./maps/43_mosel_dunes_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_ancient_ruins_of_mosel' data-toggle='collapse'>Ancient Ruins of Mosel</a></h3>
     <div id='h_ancient_ruins_of_mosel' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/44_mosel_ruins.png'><img src='./maps/44_mosel_ruins_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_mountains_of_barr' data-toggle='collapse'>Mountains of Barr</a></h3>
     <div id='h_mountains_of_barr' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/45_barr_start.png'><img src='./maps/45_barr_start_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/46_barr_mid.png'><img src='./maps/46_barr_mid_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/47_barr_end.png'><img src='./maps/47_barr_end_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       <div class='pair'><div class='overlay'><img src='./maps/48_barr_caves.png'><img src='./maps/48_barr_caves_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_ruins_of_barr' data-toggle='collapse'>Ruins of Barr</a></h3>
     <div id='h_ruins_of_barr' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/49_barr_ruins.png'><img src='./maps/49_barr_ruins_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <h3><a href='#h_urssa_lava_caves' data-toggle='collapse'>Urssa Lava Caves</a></h3>
     <div id='h_urssa_lava_caves' class='collapse in'>
       <div class='pair'><div class='overlay'><img src='./maps/50_urssa.png'><img src='./maps/50_urssa_items.png' class='items'></div><div class='caption'>
-</div></div>
+      </div></div>
       </div>
 
     <p>stuff</p>
+
+    </div>
+
+  <h2><a href='#h_disc_2_story' data-toggle='collapse'>Disc 2 Story</a></h2>
+  <div id='h_disc_2_story' class='collapse in'>
+
+    <h3><a href='#h_diplomatic_flagship_diplo' data-toggle='collapse'>Diplomatic Flagship Diplo</a></h3>
+    <div id='h_diplomatic_flagship_diplo' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_battleship_aquaelie' data-toggle='collapse'>Battleship Aquaelie</a></h3>
+    <div id='h_battleship_aquaelie' class='collapse in'>
+      </div>
 
     <h3><a href='#h_moonbase' data-toggle='collapse'>Moonbase</a></h3>
     <div id='h_moonbase' class='collapse in'>
       </div>
 
+    <h3><a href='#h_styx' data-toggle='collapse'>Styx</a></h3>
+    <div id='h_styx' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_arkives' data-toggle='collapse'>Arkives</a></h3>
+    <div id='h_arkives' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_gemity' data-toggle='collapse'>Gemity</a></h3>
+    <div id='h_gemity' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_tons_of_optional_backtracking_and_sidequests' data-toggle='collapse'>tons of optional backtracking and sidequests</a></h3>
+    <div id='h_tons_of_optional_backtracking_and_sidequests' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_sphere_211_floors_16' data-toggle='collapse'>Sphere 211 (floors 1-6)</a></h3>
+    <div id='h_sphere_211_floors_16' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_styx_again' data-toggle='collapse'>Styx (again)</a></h3>
+    <div id='h_styx_again' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_kaddan_again' data-toggle='collapse'>Kaddan (again)</a></h3>
+    <div id='h_kaddan_again' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_firewall' data-toggle='collapse'>Firewall</a></h3>
+    <div id='h_firewall' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_spiral_tower' data-toggle='collapse'>Spiral Tower</a></h3>
+    <div id='h_spiral_tower' class='collapse in'>
+      </div>
+
     </div>
 
-  <h2><a href='#h_disc_2' data-toggle='collapse'>Disc 2</a></h2>
-  <div id='h_disc_2' class='collapse in'>
+  <h2><a href='#h_optional_dungeons' data-toggle='collapse'>Optional Dungeons</a></h2>
+  <div id='h_optional_dungeons' class='collapse in'>
+
+    <h3><a href='#h_aquatic_gardens_of_surferio' data-toggle='collapse'>Aquatic Gardens of Surferio</a></h3>
+    <div id='h_aquatic_gardens_of_surferio' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_sphere_211_floors_7100' data-toggle='collapse'>Sphere 211 (floors 7-100)</a></h3>
+    <div id='h_sphere_211_floors_7100' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_mosel_ruins_lower_floors' data-toggle='collapse'>Mosel Ruins (lower floors)</a></h3>
+    <div id='h_mosel_ruins_lower_floors' class='collapse in'>
+      </div>
+
+    </div>
+
+  <h2><a href='#h_postgame' data-toggle='collapse'>Post-game</a></h2>
+  <div id='h_postgame' class='collapse in'>
+
+    <h3><a href='#h_maze_of_tribulations' data-toggle='collapse'>Maze of Tribulations</a></h3>
+    <div id='h_maze_of_tribulations' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_urssa_cave_temple' data-toggle='collapse'>Urssa Cave Temple</a></h3>
+    <div id='h_urssa_cave_temple' class='collapse in'>
+      </div>
+
+    <h3><a href='#h_sphere_211_floors_101211' data-toggle='collapse'>Sphere 211 (floors 101-211)</a></h3>
+    <div id='h_sphere_211_floors_101211' class='collapse in'>
+      </div>
+
     </div>
   </div>
 
 <h1><a href='#h_appendices' data-toggle='collapse'>Appendices</a></h1>
 <div id='h_appendices' class='collapse in'>
   </div>
-<p>Current word count: 3853</p>
+<p>Current word count: 6038</p>
 </div>

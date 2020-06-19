@@ -81,7 +81,7 @@ function pa_select() {
         var elements = document.getElementsByClassName("pa");
         for (var i in elements) {
             var elem = elements.item(i);
-            if(char == "all" || elem.getAttribute("char").includes(char)) { elem.style.display = "block";
+            if(elem.getAttribute("char").includes(char)) { elem.style.display = "block";
             } else { elem.style.display = "none"; }
         }
     }

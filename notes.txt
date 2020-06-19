@@ -27,6 +27,7 @@ etc:
 - note map completion rewards
 - note battle trophies
 
+- make a map of elicoor
 - link other faqs as source where relevant
 - remember to check (and link to) that one crafting website
 - check whether all inns have save points or not
@@ -38,4 +39,15 @@ etc:
 - edit kirlsa map to have exits labeled
 - indicate one-way door on kirlsa cavern map
 - add hauler start/stop/etc info to the hauler caverns map
+- fill in hauler puzzle shit in prose
 - check what's in the NE corner of bequerel mountain path
+- check if you can enter bequerel mine early or not
+- check how much of barr you can do early
+- check whether you have to wait until peterny to hire inventors
+
+things to ask feedback on:
+- icon/whatever to specify when an entry is for encyclopedia, inventor, etc?
+- item descriptions in shop or nah? on first appearance only?
+- same question for enemies
+- single version of map that has post-ring areas/items or separate versions?
+- readibility of colors?

@@ -60,13 +60,21 @@ with open("source.txt") as f:
                               ("<img src='%s' class='items'>" % items_img) +
                               "</div><div class='caption'>")
             elif prefix == "pam":
-                output.append("</div></div>")
+                output.append(tab + "</div></div>")
 
             # private action
-            # paN#CHARACTER#content
+            # paN#CHARACTER#content or
+            # paN#all#sop,cli,mar,nel,rog,alb,pep,mir,adr#
             elif prefix[:2] == "pa":
                 word_count += len(content[-1].split(" "))
-                output.append(tab + "<div class='pa' char='{1}'><b>PA {0}:</b> {2}</div>".format(prefix[2:], *content))
+                if content[0] == "*":
+                    output.append(tab + "<div class='pa' " +
+                                  "char='girlboy,cliff,sophia,maria,nel,roger,albel,peppita,mirage,adray'>" +
+                                  "<b>PA {0}:</b> {1}</div>".format(prefix[2:], content[-1]))
+                if content[0] == "all":
+                    output.append(tab + "<div class='pa' char='all'><b>PA %s:</b> not yet implemented</div>" % prefix[2:])
+                else:
+                    output.append(tab + "<div class='pa' char='{1}'><b>PA {0}:</b> {2}</div>".format(prefix[2:], *content))
 
             # toggle line
             # tog#TYPE#content
@@ -116,13 +124,21 @@ with open("source.txt") as f:
                     output.append(tab + "<ul><li>%s</li>" % line[1:])
                     bullet_open = True
 
+            # FOR DURING DEV ONLY:
+            # ! at beginning of line to state something is missing aka it's a TODO
+            elif line[0] == "!":
+                output.append('<div class="panel panel-danger"><div class="panel-heading">' +
+                              line[1:] + "</div></div>")
+            elif line.startswith("TODO"):
+                pass
+
             # consider this line to be full-on code already
             elif line[0] == "<":
                 word_count += len(line.split(" "))
                 output.append(tab + line)
             # normal line
             else:
-                if line[0] == "!": line = line[1:]
+                if line[0] == "/": line = line[1:]
                 word_count += len(line.split(" "))
                 output.append(tab + "<p>%s</p>" % line)
         else:
