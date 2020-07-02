@@ -9,29 +9,34 @@ That said I'll link to the more in-depth FAQs/walkthroughs that cover things thi
 
 h3#Guide Progress
 This guide is pretty obviously unfinished so far, but I've decided to start releasing it a little early in order to get feedback on the best way to display/word/cover things. I'm trying to go through it roughly linearly so people just starting the game and who are slow at playing can have more or less the intended experience.
+Just a heads-up that I haven't gone through and verified <i>all</i> information in the guide yet, most is either from memory or from other guides, but there's a couple things I haven't been able to confirm for sure. I'll go through everything myself later, but if you run into anything incorrect in the meantime and want to let me know, feel free to @ or DM me <a href="https://twitter.com/divinebenis">on Twitter</a>.
 /<b>Currently in this guide:</b>
--General mechanics explanations for <i>some</i> but not all mechanics (see )
--Rough walkthrough starting at Pesotto Forest and going as far as Kirlsa Caverns
--All maps for parts the walkthrough covers
--All private actions for parts the walkthrough covers
--All item locations for parts the walkthrough covers
--All battle trophy requirements for parts the walkthrough covers
--All puzzle solutions for parts the walkthrough covers
--All encyclopedia unlocks for parts the walkthrough covers
+-General mechanics explanations for <i>some</i> but not all mechanics
+-Rough walkthrough from the beginning and going as far as finishing the Kirlsa Training Facility, though some areas might see clarification or rewording
+-All maps, private actions, item locations, battle trophy requirements, puzzle solutions, and dictionary unlocks for parts the walkthrough covers
 --
 /<b>Currently not yet in this guide:</b>
--Certain mechanics explanations (such as general combat mechanics, etc)
--Inventor unlock locations (on account of not having reached Peterny yet) - there might be some pre-reqs I'll set up <i>before</i> reaching Peterny, but if so I'll list it in the change log just in case.
+-Colorblind patterning on certain maps
+-In-depth explanation of the hauler beast puzzle
+-Certain mechanics explanations
+-"Show all PAs" mode
+-Inventor unlock locations (on account of not having reached Peterny yet) - there might be some pre-reqs I'll set up <i>before</i> reaching Peterny, but if so I'll list it in the change log just in case, so no one misses it.
 -Appendices (character stats, item descriptions, enemy profiles, etc)
 -Any pretty CSS for formatting
+--
+<b>Known issues:</b>
+-dictionary unlock button starts greyed out for some reason (but considers itself toggled on by default)
+-probably some other stuff i forgot, idk how to use javascript or css lol
 --
 Any chunks that are currently missing (within sections that are already otherwise written) will be quickly mentioned in red panels like this:
 ![information] is currently missing from [section]
 ##
 
 h3#Change logs
-sec#wip#Change log: 16.06.20
--added some shit
+(all dates in dd.mm.yy format)
+sec#wip#Change log: 01.07.20
+-first ""official"" public release (as if this link hasnt been active the whole time)
+-not gonna list the change log before that bc there's no point
 --
 ces#
 ##
@@ -58,6 +63,23 @@ In general, if there's anything you'd like more context/information on, especial
 ##
 
 h2#Game mechanics
+
+h3#Combat
+!This section is super unfinished but hopefully covers the important parts.
+I'm not sure exactly what to cover just like that but the general gist is that this is a game with real-time, instanced combat, with 3 party members at a time.
+-you have 4 different base attacks/combos, depending on range and button. range is divided into long and short, and (in the english version) X does a light attack and O does a heavy attack
+-enemies can also do light and heavy attacks, and you can recognize heavy attacks by the purple trail left by the animation
+-all characters (including enemies) have a fury gauge that goes from 0% to 100%. attacking consumes fury. at 0% fury you cannot attack. at 100% fury if you have an anti-attack-aura (AAA) equipped, its effects activate when hit by a light attack (and you take no damage), but a heavy attack will break it and stun you. fury regenerates when standing still, and you cannot be above 99% when running
+-running out of HP will KO a character, but so will running out of MP. this also applies to enemies. having all active party members KO'd (or petrified) will cause a game over and force you to reload a save
+-most enemies deal HP damage, but some will deal MP damage with specific attacks, so watch out for that. similarly, most of your attacks deal HP damage, but some specific skills can deal MP damage
+-skills/spells can be cast from either HP or MP, and setting them to light/heavy button will affect both their cost and power
+-spells learned "naturally" can be used in combat without being equipped in the skills menu. spells learned via tomes take up a passive skill slot if you want them available in combat.
+-healing spells can be used from the menu outside combat
+-there's a cool thing you can do called skill canceling but i'll go find a guide for it later because i can't figure out the timing on it to save my life. tldr if you press a button to use a skill while in the animation for another button with the right timing, you'll cancel the end of the first skill and the second skill will do more damage. you can chain this up to 300% damage
+-when leveling characters (under "Skill Setup" > "Status"), "HP" and "MP" both just increase those stats, but "Attack" and "Defense" refer to <i>the AI</i>'s aptitude specifically, and not to any stats. they're useless to level on characters you'll control yourself and never leave to AI. on AI characters, you'll want to get them both to 4 relatively early so they don't do really stupid things
+-this is unique to Peppita and Albel, but they can dodge attacks if hitting X (and also O for Peppita) at short range when an enemy is winding up an attack. hitting X again as Albel lets you chain into his regular combo afterwards.
+--
+##
 
 h3#Optional Party Members
 Star Ocean 3 has 6 mandatory party members (as in, no matter what you do, they'll always join your party), and 4 optional party members. Of those optional party members, you can only ever recruit <b>two</b> in a given playthrough, for a total of 8 party members.
@@ -106,7 +128,7 @@ Some areas can be completed on your first visit, but some will require more than
 ##
 
 h2#Frequently Asked Questions
-Well this isnt out yet so who fuckign knows
+idk, u tell me
 ##
 
 h1#Walkthrough
@@ -135,14 +157,24 @@ About the game-related aspects:
 
 h2#Disc 1 Story
 
+!these first three sections are probably going to get rewritten at some point, ironically it's one of the hardest to describe on account of you need to do very little to progress, but there's a TON of PAs early-game and the map has a lot of areas you don't strictly need to go to
+
 h3#Grantier Resort Hotel
-[map goes here, no completion]
 map#00_grantier
-/<b>No map completion</b>
 pam#
+sec#grantier#Items
+{Shake}
+ces#
+/<b>No map completion</b>
+
+Watch through the intro cutscenes up until you get control of Fayt.
+Starting now, you can explore this entire area more or less freely, but if you're paying attention to Private Actions at all you'll want to be careful where you go and who you talk to.
+Explore the first hallway you're in (and any of the north-side rooms) if you want, then when you're ready to move on go to either end of the hallway, both teleporter rooms will take you to the same place.
 
 pa1#girlboy,sophia,cliff,maria,nel,albel,peppita,mirage#Make sure not to check the trash can in room 105.
 pa1#roger,adray#Check the trash can in room 105 before speaking to Fayt's parents.
+
+Once you're in the hotel area proper, you can visit the south-side or central rooms if you want, or take the southwest teleporter room to go visit the beach. If you do, watch out for the following PAs:
 
 pa2#girlboy,sophia,cliff,nel,roger,peppita,mirage#Make sure not to speak to Sophia on the beach before speaking to Fayt's parents.
 pa2#maria,albel,adray#Speak to Sophia on the beach before speaking to Fayt's parents.
@@ -152,20 +184,26 @@ pa3-4#roger#Talk to the woman wandering around the beach, and pick the first dia
 pa3-4##Talk to the woman wandering around the beach, and pick the second dialogue option.
 pa3-4#sophia,nel,peppita,mirage#Talk to the woman wandering around the beach, and pick the third dialogue option.
 
+tog#encyclopedia#Examine the two southwest terminals in the hotel lounge (the room in the center of the hotel area) for two entries.
+
+Once you're done with any exploring you'd like to do, enter the room in the northeast of the hotel area and watch a cutscene.
+
 pa5#girlboy,sophia,maria,nel,roger,peppita,mirage,adray#When talking to Peppita, pick the first dialogue option.
 pa5#cliff,albel#When talking to Peppita, pick the second dialogue option.
 
 pa6#girlboy,sophia,cliff,maria,nel,albel,peppita,mirage#While in the Rosetti dressing room, don't get too close to the barricaded door on the south side of the room.
 pa6#roger,adray#While in the Rosetti dressing room, go examine the barricaded door on the south side of the room.
 
-tog#encyclopedia#Examine far left and near left information terminals before playing the battle simulator for two entries.
+When you exit that cutscene, you'll now be able to start the battle simulator if you interact with one of the panels in the NE, NW, SE, or SW corners of the hotel lounge (the room at the center of the hotel area). Be aware that starting the battle simulator is a point of no return.
 
 pa7#girlboy,cliff,maria,nel,roger,albel,peppita,mirage,adray#When accessing the Game Room panel, pick the first dialogue option.
 pa7#sophia#When accessing the Game Room panel, pick the second dialogue option.
 
+The battle simulator includes a tutorial, but deciding to read that tutorial or not counts as a PA, so be aware of that. Similarly, winning/losing battles and so on are <i>also</i> PAs. Heads-up that the second and third battles (if you choose to do them) are far from trivial and might be too hard for a new player.
+Remember to activate battle trophies in the simulator if you want them, it's the only time you can do so.
+
 pa8#girlboy,maria,nel,mirage#When in the Battle Simulator, pick at least one of the options other than "Battle Trophies" and "Start Game".
 pa8#sophia,cliff,roger,albel,peppita,adray#When in the Battle Simulator, pick "Start Game" before any other option (other than "Battle Trophies" if you want those).
-TODO: check exact wordings/positions
 
 sec#grantier#Enemies (battle simulator only)
 -{Dragonfly}
@@ -183,8 +221,12 @@ pa9-11#albel#Win the first battle, pick the first dialogue option to play again,
 pa9-11#mirage#Win the first battle, pick the first dialogue option to play again, then pick the second dialogue option to end the tutorial. Note that you cannot lose either of these battles. If you're having trouble with a battle, losing is better than escaping.
 pa9-11#adray#Win the first battle, pick the first dialogue option to play again, then pick the first dialogue option <i>again</i> to play one more time. Note that you cannot lose/flee either of these battles if you want all the affection points. If you're having trouble with a battle, losing is better than escaping.
 
+Once you're done playing in the simulator, you'll get more cutscenes. Exit the lounge, do PA 12 below as needed then go take one of the teleporters.
+
 pa12#girlboy,cliff,maria,roger,albel,mirage#Don't stop by the Rossetti dressing room while leaving.
 pa12#sophia,nel,peppita,adray#Stop by the Rossetti dressing room while leaving and talk to Peppita.
+
+There's more cutscenes, then eventually you'll have your first real battle:
 
 sec#mb#Mini-Boss: Incapacitator VASS
 <b>HP:</b> 150 | <b>MP:</b> 8
@@ -195,37 +237,55 @@ ces#
 
 h3#Evacuation Facility
 map#01_evac
+sec#evac#Items
+No items on this map
+ces#
 /<b>No map completion</b>
-pam#
 
-TODO: make sure to put this w right timing
+First save point! Exit the room when you're ready, then head to room 509 and watch a cutscene. Exit back out, then explore the rest of the map if you'd like. Make sure to do PA13 if you'd like, then enter room 506 when you're ready to continue.
+
 pa13##Don't talk to Peppita by the staircase.
 pa13#*#Go to the east side staircase and talk to Peppita, then pick the first dialogue option.
 pa13##Go to the east side staircase and talk to Peppita, then pick the second dialogue option.
+
+Watch the cutscene in room 506, then go to bed when you're ready to move on. After the next set of cutscenes, head to one of the teleporters.
+
+pam#
 ##
 
 h3#Transport Ship Helre
 map#02_helre
+sec#helre#Items
+No items on this map
+ces#
 /<b>No map completion</b>
-pam#
 
-TODO: check timing/position on this one too
+Follow the hallway north, and after some cutscenes, you'll have free rein again. Explore as you'd like, the trigger for the next event is talking to everyone in this room as well as the hallway to the south. You can see a short event in the room with the stairs if you'd like. Head back up to the room with the save point.
+If you go back to the room with the stairs, it should now be open. Walk up and head to the south of this hallway. Speak with the attendants.
+
+In the room at the very top of the map (up the hallway, door to the left, then up to the bridge), you can find the crew and talk to them. One of the crew members (the one on the left side) has a PA you can respond to.
 pa14##Don't talk to the crewmember on the bridge.
 pa14#maria,nel#Talk to the crewmember on the bridge and pick the first dialogue option.
 pa14#roger,mirage,adray#Talk to the crewmember on the bridge and pick the second dialogue option.
 pa14#sophia,albel#Talk to the crewmember on the bridge and pick the third dialogue option.
 pa14#girlboy,cliff,peppita#Talk to the crewmember on the bridge and pick the fourth dialogue option.
 
-TODO: for pa15, same as above i dont remember exactly how this part goes
-pa15#albel#skip the pa
-pa15#girlboy,sophia,cliff,maria,nel,roger,peppita,mirage,adray#dont skip the pa
+If you head back down the stairs, you'll find Peppita's group. Talking to them is also a PA.
+pa15#albel#Don't talk to any of the Rossettis.
+pa15#girlboy,sophia,cliff,maria,nel,roger,peppita,mirage,adray#Talk to at least one of the Rossettis.
+
+Regardless of which PAs you did (or didn't do), go back to where the attendants were, you can now move into the room to the South. Enter one of the pods and watch the next set of cutscenes.
 
 pa16#sophia,cliff,maria,nel,peppita#During the cutscene, pick the first dialogue option.
 pa16#girlboy,roger,albel,mirage,adray#During the cutscene, pick the second dialogue option.
+pam#
 ##
 
 h3#Pesotto Forest
 map#03_pesotto
+sec#pesotto#Items
+No items on this map
+ces#
 sec#pesotto#Enemies
 -{Young Slime}
 -{Nobleman}
@@ -240,6 +300,9 @@ pam#
 
 h3#Whipple Village
 map#04_whipple
+sec#whipple#Items
+{Aquaberries}, {Blackberries} x2, {Blueberries}, 600 Fol
+ces#
 sec#shop#General Store "Manybloom"
 -{Blueberries} (45 Fol)
 -{Blackberries} (35 Fol)
@@ -268,6 +331,9 @@ This also marks the earliest point at which you can 100% the Pesotto Forest map,
 
 h3#Ruins of Coffir
 map#05_coffir
+sec#coffir#Items
+{Aquaberries} x3, {Blackberries} x3, {Blueberries} x3, {Ripe Berries}, {Fresh Sage}, {Cooking Ingredients} x2, 200 Fol
+ces#
 sec#coffir#Enemies
 -{Nobleman}
 -{Thieving Scumbag}
@@ -292,6 +358,9 @@ pam#
 
 h3#Norton's Hideout
 map#06_norton
+sec#norton#Items
+{Fresh Sage}, {Jewel of Refuge}
+ces#
 sec#norton#Enemies
 -{Nobleman}
 -{Thieving Scumbag}
@@ -320,7 +389,7 @@ Exit the hideout, watch a cutscene, then exit the ruins and go back to Whipple.
 
 h3#Leaving Vanguard III
 You'll have some cutscenes in Whipple, after which you're free to leave if you'd like. Before you do so, though, you can talk to the village chief and he'll give you a {Medecentra Pyroxene} as a reward for your actions. It's an accessory that halves the HP cost of battle skills when equipped.
-This is now your last chance to do anything on this planet before you leave!
+This is now your last chance to do anything on this planet before you leave! If you haven't bought the Ring Mail yet and you're doing okay on defense, I'd recommend putting it off as you can find one for free in the next dungeon.
 Once that's done, head back to the southern half of Pesotto Forest, specifically the spot just to the southwest of the save point. Make sure to save either here or in the village if you don't want to risk rewatching some of the previous cutscenes.
 Time for some cutscenes, including a weirdly-paced flashback, after which you'll be in a ship with Cliff and Mirage. Speak with Cliff once and with Mirage three times, after which you can leave and enjoy some more cutscenes.
 sec#mb#Mini-boss: Inquisitor
@@ -332,6 +401,9 @@ ces#
 
 h3#Airyglyph Aqueducts
 map#07_aqueduct
+sec#aqueduct#Items
+{Blueberries} x2, {Fresh Sage}, {Worm-eaten Tome}, {Ring Mail}, {Warrior's Bracelet}
+ces#
 sec#aqueduct#Enemies
 -{Bogle Leader}
 -{Bogle Soldier}
@@ -358,6 +430,9 @@ Go back and save if you need to, we're almost out. The large white patch in the 
 
 h3#Royal City of Airyglyph
 map#08_airyglyph
+sec#airyglyph#Items
+{Aquaberries}, {Blackberries} x3, {Blueberries} x3, {Ripe Berries} x3, {Perfect Berries} x2, {Compounding Elixirs} x2, {Cooking Ingredients} x3, 2000 Fol
+ces#
 sec#shop#Grocer "Dragon Treasure"
 (bottom-center shop)
 -{Blueberries} (45 Fol)
@@ -397,14 +472,17 @@ ces#
 /<b>Inn "Wyvern's Tail"</b> - 150 Fol/night
 /<b>No map completion</b>
 You'll notice the equipment prices are prohibitedly expensive. This is an area we'll spend more time in later in the game, for now we're just passing through. <i>That said</i>, you can take advantage of this and get some midgame weapons early if you're interested in lowering the overall game difficulty, by selling bunnies from map completion rewards. You'll need two of them, and at this point you only have at most one, but you can get a second in the next area.
-There isn't a lot to do in the city just yet other than any basic shopping you need, as well as talking to NPCs. The castle is locked off for now, as the guards won't let you in. Grab any treasure if you'd like, save at the inn, and head out the East exit when you're ready.
 pam#
+There isn't a lot to do in the city just yet other than any basic shopping you need, as well as talking to NPCs. The castle is locked off for now, as the guards won't let you in. Grab any treasure if you'd like, save at the inn, and head out the East exit when you're ready.
 ##
 
 h3#Traum Mountains
 map#09_traum
 pam#
-sec#aqueduct#Enemies
+sec#traum#Items
+{Blackberries}, {Blueberries}, {Ripe Berries}, {Jewel of Alertness}, 400 Fol
+ces#
+sec#traum#Enemies
 -{Bogle Leader}
 -{Bogle Soldier}
 -{Dragon Brigade Soldier}
@@ -420,6 +498,9 @@ Anytime you're ready to progress, just head for Kirlsa.
 
 h3#Mining Town of Kirlsa
 map#10_kirlsa
+sec#kirlsa#Items
+{Aquaberries}, {Blackberries}, {Blueberries} x2, {Ripe Berries}, {Perfect Berries} x2, {Compounding Elixirs}, 1920 Fol
+ces#
 sec#shop#Grocer "Iron Curtain"
 (left-most shop)
 -{Blueberries} (45 Fol)
@@ -448,23 +529,26 @@ ces#
 /<b>Inn "Iron Maiden"</b> - 100 Fol/night
 /<b>No map completion</b>
 Once you're done with cutscenes, you're locked into this map until you progress a little more into the story. The northeast section of town is locked off until another several hours from now, the guards won't let you pass the gates. A guard also blocks off the northern path out of town, but he's only there until we finish our business here.
-Do any shopping you'd like, talk to NPCs, and once you're ready to progress, go down the stairs in the southwest corner of the town and talk to the Sermonic Old Man, then go up to the cemetery (north of the inn, up the stairs) and watch a cutscene there.
+pam#
+Do any shopping you'd like (heads-up that you can find both a {Scale Armor} and a {Falchion} for free in the next area), talk to NPCs, and once you're ready to progress, go down the stairs in the southwest corner of the town and talk to the Sermonic Old Man, then go up to the cemetery (north of the inn, up the stairs) and watch a cutscene there.
 tog#encyclopedia#Speak to Astor in the house across from the inn for his entry.
 Once you're done with that, starting the next morning you'll be allowed to leave town. Do so via the north exit.
 
-pa17#girlboy#Starting now (and until entering the "Granah Hills" region), if you decide to return to Airyglyph for whatever reason, make sure not to talk to Cliff next to the Aqueducts entrance.
-pa17#sophia#Go all the way back to Airyglyph, talk to Cliff next to the Aqueducts entrance, and pick the first dialogue option.
-pa17##Go all the way back to Airyglyph, talk to Cliff next to the Aqueducts entrance, and pick the second dialogue option.
+pa17#girlboy,albel#Starting now (and until entering the "Granah Hills" region for the first time), if you decide to return to Airyglyph for whatever reason, make sure not to talk to Cliff next to the Aqueducts entrance.
+pa17#sophia,maria,nel,roger,peppita,mirage,adray#Go all the way back to Airyglyph, talk to Cliff next to the Aqueducts entrance, and pick the first dialogue option.
+pa17#cliff#Go all the way back to Airyglyph, talk to Cliff next to the Aqueducts entrance, and pick the second dialogue option.
 
 sec#holysword#Easy mode
 /<i>That said</i>, as mentioned in the previous section, if you're interested in getting some overpowered weapons, now is the best time to do it. Kirlsa's west exit has also opened back up, meaning you're free to backtrack to Airyglyph if you'd like, and you can sell the map completion rewards from Pesotto Forest and Traum Mountains for a cool 18000 Fol total. This is just under the amount you need to buy the {Holy Sword}, which is by far the best weapon you can get for Fayt at this stage in the game.
 If you don't play Fayt you might be tempted by one of the other weapons, but the {Damask Gauntlet} is absurdly overpriced (and not to be confused with {Damask Gauntlets}, <i>another</i> one of Cliff's weapons) and the {Osprey Dagger} will make a less significant upgrade for Nel than the Holy Sword would for Fayt.
 ces#
-pam#
 ##
 
 h3#Kirlsa Caverns
 map#11_kirlsa_cavern
+sec#kirlsa1#Items
+{Blackberries}, {Scale Armor}
+ces#
 sec#kirlsa1#Enemies
 -{Giant Bat}
 -{Huge Spider}
@@ -473,10 +557,10 @@ sec#kirlsa1#Enemies
 --
 ces#
 /<b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until later in the game)
-Welcome to the Kirlsa cavern! This is the first dungeon in the game that's big enough to require two different maps, but the second involves a... minigame/puzzle, of sorts.
+Welcome to the Kirlsa caverns! This is the first dungeon in the game that's big enough to require two different maps, but the second involves a... minigame/puzzle, of sorts.
+pam#
 As with a number of the maps so far, several areas on this first map are currently blocked off on account of us not having anything to destroy rocks with.
 The path through this first map is fairly straightforward, just head to the save point via the east route, heal, and save in preparation for the boss.
-pam#
 sec#b#Boss: Earth Smasher
 /<b>HP:</b> 3600 | <b>MP:</b> 163 | <b>Absorbs</b> Earth
 Absorbs earth magic, but has no other elemental strengths/weaknesses. Has high HP but relatively low MP, so you might want to consider trying for an MP kill.
@@ -487,6 +571,9 @@ ces#
 Once the fight is over, go north and pull the lever there. The door you came through locked behind you, so you have to go back around to continue. I recommend saving before you start on the next half of the dungeon, which is located in the room labeled <b>Hauler Console</b>.
 
 map#12_hauler_puzzle
+sec#kirlsa2#Items
+{Aquaberries}, {Blackberries}, {Ripe Berries}, {Fresh Sage}, {Falchion}, {Charm of Insight}, {Earth Pixie}, 5000 Fol
+ces#
 sec#kirlsa2#Enemies
 These aren't present while riding the hauler, but will appear at specific stop points if you decide to stop and explore.
 -{Cave Spider}
@@ -503,8 +590,35 @@ The puzzle is divided into three sections below:
 -A "just get me out" guide, for exiting the caverns as fast as possible with the least amount of hassle
 --
 sec#hauler#General Hauler Guide
+!unfinished
+You can only turn when going below 25 km/h, and you can only stop when going below 15 km/h.
+Haulers lose endurance when hitting objects (like fences, falling rocks, or walls).
+There's 5 different Hauler beasts to choose from:
+-<b>Steady</b> accelerates very slowly, has medium endurance, follows your orders
+-<b>Carefree</b> accelerates slowly, has high endurance, always turns right-right-left-right and returns to entrance
+-<b>Whimsical</b> accelerates quickly, has medium endurance, jumps far, and ignores orders to move around randomly instead
+-<b>Ill-Natured</b> accelerates quickly, has low endurance, always goes in the opposite direction of your orders
+-<b>Aggressive</b> has a high minimum speed (and cannot stop), high endurance, can break down walls, and randomly ignores orders
+--
 ces#
 sec#hauler#Puzzle Solution - all items
+!im sorry i hate this puzzle i havent finished writing it
+all of these are described as starting from the beginning. unless specified you can use either steady or ill-natured for all of these, but this is written with steady in mind
+-item 1: stop at first stop
+-item 2: right, right, right, stop
+-item 3:<ul>
+-pick aggressive hauler, go right, right, left, left and break wall
+-pick steady/ill-natured, go right, right, left, left, stop
+</ul>
+-items 4, 5:<ul>
+-pick aggressive hauler, go right, left, break wall, left, break other wall
+-pick steady/ill-natured, go right, left, choose to turn left and immediately stop
+-get back on hauler, stop again after taking the left from previous
+</ul>
+-item 6: left, right, stop
+-item 7: left, left, stop
+-item 8: pick whimsical hauler, cross your fingers for left, right, left, right, stop immediately after landing jump
+--
 ces#
 sec#hauler#Puzzle Solution - just get me out
 Remember to stay under 25 km/h before any turns!
@@ -517,12 +631,15 @@ Pick the <b>Steady</b> Hauler, then take the following route:
 --
 This might take you a couple tries, hauler beasts are finicky.
 ces#
-Once you're out, you can talk to the NPC at the exit if you ever want to return to the beginning of the puzzle and redo it. As soon as you've reached the end at least once, you'll have the "automatic" option at the console so you don't have to do the puzzle again unless you want to.
 pam#
+Once you're out, you can talk to the NPC at the exit if you ever want to return to the beginning of the puzzle and redo it. As soon as you've reached the end at least once, you'll have the "automatic" option at the console so you don't have to do the puzzle again unless you want to.
 ##
 
 h3#Bequerel Mountain Path
 map#13_bequerel
+sec#bequerel#Items
+{Aquaberries}, {Blackberries}, {Ripe Berries}, {Compounding Elixirs}, {Crafting Materials}, {Writing Materials}
+ces#
 TODO: check whether these are all active  here and now or if some are story-only
 sec#bequerel#Enemies
 -{Dire Wolf}
@@ -539,6 +656,9 @@ pam#
 
 h3#Riverfront Village of Arias
 map#14_arias
+sec#arias#Items
+{Aquaberries}, {Blackberries}, {Ripe Berries}, {Perfect Berries}, {Cooking Ingredients}, {Multi-Flask}
+ces#
 sec#shop#General Store "Jack Potato"
 (top-most shop)
 -{Silver Ring} (1750 Fol)
@@ -564,13 +684,20 @@ sec#shop#Bakery "Moonlight Gauntlet"
 ces#
 /<b>Inn "The Dozing"</b> - 250 Fol/night
 /<b>No map completion</b>
+Take any time you want to visit and do some shopping if you need to, especially if you'd like to upgrade your equipment (note that you can find a {Steel Chain Mail} in a chest in one of the next field areas, and a {Long Dagger} and {Steel Gauntlet} in the next dungeon). Don't worry about sleeping at the inn if you're low on HP/MP, you'll get free healing as part of the story before the next time you run into combat.
 pam#
 tog#encyclopedia#Examine the painting near the front desk of the inn, then read the entry for "Nevelle Zelpher" to get a second entry.
-tog#encyclopedia#Examine the note on the table the first time you visit the Lord's Mansion.
+Once you're ready, enter the large building in the center-northeast of town, the one on the map with the save point. Explore the first floor if you want, your goal is the room at the end of the hall and to your right, which will trigger a cutscene.
+tog#encyclopedia#Examine the note on the table in the kitchen (from where you enter, go down the hallway and take a left) the first time you visit the mansion.
+You now have access to the save point, and you're free to move around again if you'd like to, just examine the bed next to Cliff when you want to call it a night.
+In the morning, go downstairs and back into the conference room (the same room as before) and watch another cutscene. Leave the mansion, then leave Arias but through the southwest exit this time.
 ##
 
 h3#Aire Hills/Kirlsa Hills
 map#15_hills
+sec#hills#Items
+{Blackberries}, {Blueberries} x3, {Jewel of Refuge}, {Compounding Elixirs}
+ces#
 sec#hills#Enemies
 -{Bogle Soldier}
 -{Dire Wolf}
@@ -581,11 +708,16 @@ sec#hills#Enemies
 ces#
 /<b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)
 (This area changes name depending on which part of it you're standing in - the half on the Arias side is called "Aire Hills" and the half on the Kirlsa side is "Kirlsa Hills")
+Nothing very notable on this map - most enemies are ones you've fought before, and there's a road you can follow if you just want to head straight to Kirlsa.
+Once you've reached Kirlsa, stay at the inn if you need to, save, then head out the south gate to Granah Hills.
 pam#
 ##
 
 h3#Granah Hills
 map#16_granah
+sec#granah#Items
+{Blackberries}, {Blueberries}, {Steel Chain Mail}
+ces#
 sec#granah#Enemies
 -{Black Brigade Soldier}
 -{Elder Shrieker}
@@ -594,10 +726,15 @@ sec#granah#Enemies
 --
 ces#
 /<b>Map Completion Reward:</b> 1/144 Scale Bunny (can be completed right away)
+Another small field area, with slightly stronger enemies this time. Not much to do but head southeast towards the training facility. Heads-up that you'll have a mandatory fight once you enter the facility, so if you've been taking the time to pick up items, complete the map, or grind, you might want to stop by Kirlsa again to heal/save as needed.
 pam#
 ##
 
 h3#Kirlsa Training Facility
+map#17_kirlsa_tf_floor1
+sec#kirlsa_tf1#Items
+{Aquaberries}, {Blackberries}, {Blueberries}, {Cooking Ingredients}, {Long Dagger}, {Anti-Poison Amulet}
+ces#
 sec#ktf#Enemies
 -{Animated Armor}
 -{Black Brigade Soldier}
@@ -611,156 +748,184 @@ sec#ktf#Enemies
 --
 ces#
 /<b>Map Completion Reward:</b> 1/60 Scale Bunny (you cannot complete this map until later in the game)
-map#17_kirlsa_tf_floor1
-pam#
-map#18_kirlsa_tf_floor2
-pam#
-map#19_kirlsa_tf_floor3
-pam#
-map#20_kirlsa_tf_floor4
+Right after entering the training facility, you're met with a cutscene and a mandatory fight. Don't worry about making it clean, there's both a save point and recovery point right at the entrance.
+First off - this place is <i>big</i>. This is by far the biggest dungeon so far, and it's really easy to get lost. Hopefully the maps on this page help. You start on the ground floor, and you'll want to make your way up to the third floor to get a key, come back to the ground floor, and use said key to open the locked door to the elevator to the fourth floor.
+So, that said, we're aiming for the stairs to the second floor, located around the center of the map. If you decide to go around hugging the walls for map completion, beware the room in the top-right corner with the arrow above a line. That's a one-way door, and if you go through it you'll have to walk back around the entire floor again to get back to where you were.
 pam#
 
+map#18_kirlsa_tf_floor2
+sec#kirlsa_tf2#Items
+{Aquaberries}, {Blackberries}, {Blueberries}, {Compounding Elixirs}, {Cooking Ingredients} x3, {Neglected Textbook}, {Worm-eaten Tome}
+ces#
+Make your way to the stairs in the top-right corner of the map.
+Unlike the first floor, you're not stuck going counter-clockwise on this floor, but the door to the elevator in the top-right corner <i>is</i> a one-way door so you won't be able to access the area up there until you've unlocked the first-floor elevator.
+Same as in the Airyglyph Aqueducts, some of the obstacles on this floor have arches you can walk under, marked slightly lighter than the surrounding obstacle.
+pam#
+
+map#19_kirlsa_tf_floor3
+sec#kirlsa_tf3#Items
+{Blackberries}, {Blueberries}, {Compounding Elixirs}, {Cooking Ingredients}, {Steel Gauntlet}, {Symbol of Courage}, 8000 Fol
+ces#
+Head to the room with the save point, and talk to the NPCs there. One of them will give you the Cuprite Key, which opens the room to the elevator on the ground floor. Heal and save as needed, then enjoy the trek back to to the ground floor.
+Once back on the ground floor, head to the top-right corner of the map to find the locked door, and walk through it to get a cutscene and a mandatory fight against more black brigade soldiers.
+Go back to use the healing pad if you really need to, then take the elevator up to the fourth floor.
+pam#
+
+map#20_kirlsa_tf_floor4
+sec#kirlsa_tf4#Items
+No items on this map
+ces#
+Having reached the fourth floor, save your game and get ready for two consecutive fights as soon as you enter the southern room: a set of black brigade soldiers, followed by the actual boss.
 sec#b#Boss: Shelby
 Shelby - <b>HP:</b> 5100 | <b>MP:</b> 13816 | <b>Absorbs</b> Wind
 Black Brigade Soldier (x2) - <b>HP:</b> 1150 | <b>MP:</b> 68
-
-tog#trophies#<b>Defeat Shelby within 1 minute:</b>
-tog#trophies#<b>Defeat Shelby without taking damage:</b>
+Get the soldiers first, then focus on Shelby. He doesn't have a ton of HP so as long as you're not getting overwhelmed you should be fine.
+tog#trophies#<b>Defeat Shelby within 1 minute: Control Cliff, put all your best equipment on him, and try to focus on spamming his X attacks. Presumably skill cancelling is another option.</b>
+tog#trophies#<b>Defeat Shelby without taking damage: As with the other no damage trophies, try to stand to the side and let the AI companions handle the fight for you.</b>
 ces#
+pam#
 
 TODO: either include pa18 in this section or make a section between this and the next one
 ##
 
 !This is where the guide ends for now! Will try to add more in a reasonably timely manner but this game has a lot in it.
+<div class="panel panel-warning"><div class="panel-heading">
+To anyone who's made it this far - thanks for checking out the guide! I hope it's been useful and I hope you like the game so far :)
+Like I mentioned in one of the opening sections, if anything is missing, badly-worded, hard to understand, or whatever else, feel free to DM or @ me <a href="https://twitter.com/divinebenis">on Twitter</a> and I'll try to get back to you. Positive messages also allowed but I don't want to fish for those.
+Most notably, I'm curious about the following things:
+-Would you like an extra map "layer" for things like story/event triggers? As opposed to just the text descriptions so far.
+-Is it useful to see the destructible walls <i>before</i> having access to something to destroy them, or would you rather have them marked like any other walls (and have the visual difference only for later maps, including revisits)?
+--
+</div></div>
 
 h3#Palmira Plains
-map#21_palmira
-pam#
+TODO map#21_palmira
+TODO pam#
 ##
 
 h3#Trading Town of Peterny
-map#22_peterny
-pam#
+TODO map#22_peterny
+TODO pam#
 
 TODO: pa19
 ##
 
 h3#Sanmite Steppe
-map#23_sanmite
-pam#
+TODO map#23_sanmite
+TODO pam#
 ##
 
 h3#Duggus Forest
-map#24_duggus_start
-pam#
-map#25_duggus_mid
-pam#
-map#26_duggus_end
-pam#
+TODO map#24_duggus_start
+TODO pam#
+TODO map#25_duggus_mid
+TODO pam#
+TODO map#26_duggus_end
+TODO pam#
 
 TODO: pa20, pa21, see where to fit pa22-24
 ##
 
 h3#Lost City of Surferio
-map#27_surferio
-pam#
+TODO map#27_surferio
+TODO pam#
 
 TODO: pa25
 ##
 
 h3#Irisa Fields
-map#28_irisa
-pam#
+TODO map#28_irisa
+TODO pam#
 ##
 
 h3#Surferio Annex
-map#29_annex
-pam#
+TODO map#29_annex
+TODO pam#
 ##
 
 h3#Sacred City of Aquios
-map#30_aquios
-pam#
+TODO map#30_aquios
+TODO pam#
 
 TODO: pa26
 ##
 
 h3#Castle Aquaria
-map#31_aquaria_1f
-pam#
-map#32_aquaria_2f
-pam#
+TODO map#31_aquaria_1f
+TODO pam#
+TODO map#32_aquaria_2f
+TODO pam#
 
 TODO: pa27, pa28
 ##
 
 h3#Bequerel Mine
-map#33_bequerel_part1
-pam#
-map#34_bequerel_part2
-pam#
-map#35_bequerel_part3
-pam#
-map#36_bequerel_refinery
-pam#
+TODO map#33_bequerel_part1
+TODO pam#
+TODO map#34_bequerel_part2
+TODO pam#
+TODO map#35_bequerel_part3
+TODO pam#
+TODO map#36_bequerel_refinery
+TODO pam#
 ##
 
 h3#War
 ##
 
 h3#Sealed Cavern
-map#37_cavern
-pam#
+TODO map#37_cavern
+TODO pam#
 ##
 
 h3#Shrine of Kaddan
-map#38_kaddan_south
-pam#
-map#39_kaddan_mid
-pam#
-map#40_kaddan_north
-pam#
-map#41_kaddan_end
-pam#
+TODO map#38_kaddan_south
+TODO pam#
+TODO map#39_kaddan_mid
+TODO pam#
+TODO map#40_kaddan_north
+TODO pam#
+TODO map#41_kaddan_end
+TODO pam#
 ##
 
 h3#Passage from Parch to Plenty
-map#42_passage
-pam#
+TODO map#42_passage
+TODO pam#
 ##
 
 h3#Mosel Dunes
-map#43_mosel_dunes
-pam#
+TODO map#43_mosel_dunes
+TODO pam#
 ##
 
 h3#Ancient Ruins of Mosel
-map#44_mosel_ruins
-pam#
+TODO map#44_mosel_ruins
+TODO pam#
 ##
 
 h3#Mountains of Barr
-map#45_barr_start
-pam#
-map#46_barr_mid
-pam#
-map#47_barr_end
-pam#
-map#48_barr_caves
-pam#
+TODO map#45_barr_start
+TODO pam#
+TODO map#46_barr_mid
+TODO pam#
+TODO map#47_barr_end
+TODO pam#
+TODO map#48_barr_caves
+TODO pam#
 ##
 
 h3#Ruins of Barr
-map#49_barr_ruins
-pam#
+TODO map#49_barr_ruins
+TODO pam#
 ##
 
 h3#Urssa Lava Caves
-map#50_urssa
-pam#
+TODO map#50_urssa
+TODO pam#
 ##
 
-stuff
+TODO stuff
 
 ##
 

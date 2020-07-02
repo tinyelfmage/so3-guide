@@ -69,18 +69,22 @@ with open("source.txt") as f:
                 word_count += len(content[-1].split(" "))
                 if content[0] == "*":
                     output.append(tab + "<div class='pa' " +
-                                  "char='girlboy,cliff,sophia,maria,nel,roger,albel,peppita,mirage,adray'>" +
-                                  "<b>PA {0}:</b> {1}</div>".format(prefix[2:], content[-1]))
+                                  "char='girlboy,cliff,sophia,maria,nel,roger,albel,peppita,mirage,adray'><p>" +
+                                  "<b>PA {0}:</b> {1}</p></div>".format(prefix[2:], content[-1]))
                 if content[0] == "all":
-                    output.append(tab + "<div class='pa' char='all'><b>PA %s:</b> not yet implemented</div>" % prefix[2:])
+                    output.append(tab + "<div class='pa' char='all'><p><b>PA %s:</b> not yet implemented</p></div>" % prefix[2:])
                 else:
-                    output.append(tab + "<div class='pa' char='{1}'><b>PA {0}:</b> {2}</div>".format(prefix[2:], *content))
+                    output.append(tab + "<div class='pa' char='{1}'><p><b>PA {0}:</b> {2}</p></div>".format(prefix[2:], *content))
 
             # toggle line
             # tog#TYPE#content
             elif prefix == "tog":
                 word_count += len(content[-1].split(" "))
-                output.append(tab + "<p class='%s'>%s</p>" % tuple(content))
+
+                if content[0] == "encyclopedia":
+                    output.append(tab + "<p class='%s'><b>Dictionary entry:</b> %s</p>" % tuple(content))
+                else:
+                    output.append(tab + "<p class='%s'>%s</p>" % tuple(content))
 
             # TODO: sections that can be open/closed on their own
             # sec#type#title

@@ -33,13 +33,16 @@
             top: 0;
             left: 0;
         }
+        .pa {
+            display: none;
+        }
     </style>
 </head>
 
 <div class="header">
     <h1>STAR OCEAN 3 COMPREHENSIVE WALKTHROUGH</h1>
     <select id="s_pa" onchange="pa_select()">
-        <option>Show all PAs</option>
+        <option>Show all PAs (CURRENTLY UNAVAILABLE)</option>
         <option>Nel & Peppita Routing</option>
         <option>Albel & Roger Routing</option>
         <option>Sophia Max Affection Route</option>
@@ -55,7 +58,7 @@
     <button id="b_items" onclick="toggle('items')">show item locations</button>
     <button id="b_trophies" onclick="toggle('trophies')">show battle trophy requirements</button>
     <button id="b_inventor" onclick="toggle('inventor')">show inventor unlocks</button>
-    <button id="b_encyclopedia" onclick="toggle('encyclopedia')">show encyclopedia unlocks</button>
+    <button id="b_encyclopedia" onclick="toggle('encyclopedia')">show dictionary unlocks</button>
     <br>
     <button onclick="expand()">expand all</button>
     <button onclick="collapse()">collapse all</button>
@@ -109,6 +112,7 @@ function collapse() { $(".collapse").collapse("hide"); }
 window.onload = function wc() {
     var togls = ["items", "trophies", "inventor", "encyclopedia"]
     for (var x in togls) { toggle(togls[x]); }
+    pa_select();
 }
 </script>
 
